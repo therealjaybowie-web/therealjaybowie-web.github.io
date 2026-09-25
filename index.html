@@ -1,0 +1,1027 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jay Bowie — Work</title><meta name="description" content="Jay Bowie — copywriting and design portfolio"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ctext y='32' x='9' font-size='34'%3EJ%3C/text%3E%3C/svg%3E"><style>
+:root{--bg:#e8e9eb;--ink:#30312e;--accent:#f26723}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Helvetica,Arial,sans-serif}
+button,a{-webkit-tap-highlight-color:transparent;color:inherit}
+button{font:inherit}
+a{text-decoration:none}
+button{border:0;background:none;cursor:pointer}
+header{position:absolute;inset:30px 4.3% auto 5.8%;display:flex;justify-content:space-between;z-index:5}
+ .brand{position:relative;font-size:31.9px;font-weight:400;letter-spacing:0;display:flex;align-items:flex-start;padding:0;line-height:1.4;width:max-content;min-height:1.4em}
+.roll-cell{display:block;height:1.4em;overflow:visible;flex-shrink:0}
+.roll-track{display:block;will-change:transform,opacity;clip-path:inset(0 0 0 0);transform-origin:50% 68%}
+.roll-face{display:block;height:1.4em;line-height:1.4;white-space:pre}
+.roll-tail{display:flex;overflow:visible}
+
+.roll-tail .roll-cell{clip-path:inset(-.1em -.04em .12em -.04em)}
+
+.roll-tail .roll-cell[data-n="2"]{clip-path:inset(-.1em -.04em -.08em -.04em)}
+
+nav{position:fixed;top:30px;right:4.3%;display:flex;flex-direction:column;align-items:flex-start;gap:23px;padding-top:28px;perspective:400px}
+nav a,nav button{font-size:19px;padding:0;transform-origin:right;opacity:0;animation:unfold .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:1.65s}
+nav>:nth-child(2){animation-delay:1.8s}
+nav>:nth-child(3){animation-delay:1.95s}
+nav .active{color:var(--accent)}
+@keyframes unfold{from{opacity:0;transform:rotateY(85deg) translateX(16px)}
+to{opacity:1;transform:none}
+}
+
+main{width:72%;max-width:1250px;margin:0 auto;padding:245px 0 130px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:50px 38px}
+.emerge{opacity:0;animation:emerge 1.25s cubic-bezier(.18,.65,.25,1) forwards;animation-delay:calc(1.95s + var(--i)*55ms)}
+@keyframes emerge{from{opacity:0;transform:translateY(20px) scale(.98);filter:blur(9px)}
+to{opacity:1;transform:none;filter:blur(0)}
+}
+.card{display:block;position:relative;text-align:left;padding:7px;border-radius:7px;isolation:isolate;width:100%;outline-offset:12px;background:transparent;box-shadow:none;transform-origin:center;transition:transform 1150ms cubic-bezier(.32,0,.22,1)}
+.grid{position:relative;isolation:isolate}
+
+.emerge{position:relative;translate:0 0;transition:translate 1200ms cubic-bezier(.32,0,.22,1)}
+.emerge.is-expanded{z-index:3}
+.emerge:has(.card:hover),.emerge:has(.card:focus-visible){z-index:2}
+
+.thumb{aspect-ratio:229/160;border-radius:9px;background-repeat:no-repeat;background-size:684.72% 987.5%;width:100%}
+.caption{padding-top:19px;min-height:53px;font-size:12px;line-height:1.35;position:relative}
+.caption strong{font-weight:600;display:block;padding-right:10px}
+.caption span{display:block}
+.arrow{position:absolute;right:2px;top:22px;opacity:0;transition:opacity .4s}
+.card:hover .arrow,.card:focus-visible .arrow{opacity:1}
+.project-intro{display:grid;grid-template-columns:1fr 1.6fr;gap:55px;margin-bottom:36px}
+.project-intro h1{font-size:19px;line-height:1.5;font-weight:400;margin:0}
+.project-intro h1 span{color:var(--accent)}
+.project-intro p{font-size:16px;line-height:1.55;margin:0 0 12px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.piece{background-repeat:no-repeat;border-radius:7px}
+.wide{grid-column:1/-1}
+.stack{display:grid;gap:18px}
+.project-footer{display:flex;justify-content:center;gap:65px;margin-top:90px;font-size:15px}
+.project-footer a:hover{color:var(--accent)}
+dialog{background:var(--bg);color:var(--ink);max-width:440px;border:0;border-radius:12px;padding:35px;box-shadow:10px 12px 40px #0003}
+dialog::backdrop{background:#2225;backdrop-filter:blur(5px)}
+dialog p{line-height:1.6}
+dialog button{color:var(--accent);padding:10px 0}
+.replay{display:block;position:static;width:max-content;margin:0 auto 30px;font-size:11px;letter-spacing:.02em;color:#73766f;padding:8px}
+.skip{position:absolute;left:20px;top:-60px}
+.skip:focus{top:10px;z-index:20}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent)}
+
+@media(min-width:1800px){.caption{font-size:14px}
+}
+@media(max-width:1050px){main{width:78%;padding-top:200px}
+.grid{grid-template-columns:repeat(3,1fr);gap:32px 24px}
+nav a,nav button{font-size:16px}
+.project-intro{gap:30px}
+}
+@media(max-width:700px){header{inset:22px 6% auto}
+.brand{font-size:24.2px}
+nav{top:22px;right:6%;padding-top:8px;gap:16px;font-size:15px}
+main{width:88%;padding-top:180px}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}
+.card{padding:7px}
+.caption{padding-top:13px;font-size:12px}
+.project-intro{grid-template-columns:1fr;gap:18px}
+.gallery{gap:12px}
+.stack{gap:12px}
+.project-intro p{font-size:16px}
+.replay{position:static;display:block;margin:0 auto 25px}
+.project-footer{gap:30px}
+}
+
+
+/* LEGO project: original assets and responsive editorial gallery. */
+main.project-page{width:min(1180px,78vw);max-width:none;padding-top:clamp(180px,17vw,330px);padding-bottom:100px}
+
+.lego-project .project-intro{grid-template-columns:1fr 1.65fr;gap:clamp(28px,5vw,80px);margin-bottom:48px}
+
+.lego-project .project-intro h1{font-size:clamp(17px,1.4vw,22px)}
+
+.lego-project .project-intro p{font-size:clamp(14px,1.1vw,16px);line-height:1.65;margin-bottom:17px}
+
+.lego-project .project-credits{margin-top:24px;font-size:13px;letter-spacing:.025em}
+
+.lego-project img{display:block;width:100%;height:auto;border-radius:5px}
+
+.lego-gallery{display:grid;gap:clamp(10px,1.2vw,18px);margin-top:clamp(10px,1.2vw,18px)}
+
+.lego-gallery figure,.lego-artwork-strip figure{margin:0;min-width:0}
+
+.lego-gallery-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.2vw,18px);align-items:start}
+
+.lego-gallery-row:nth-child(2){grid-template-columns:1.425fr 1.777fr}
+
+.lego-artwork-strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(4px,.8vw,12px);width:100%;margin-top:clamp(16px,2vw,30px)}
+
+
+
+.lego-project .project-footer{margin-top:clamp(50px,7vw,110px)}
+
+@media(max-width:700px){main.project-page{width:88%;padding-top:180px}
+.lego-project .project-intro{grid-template-columns:1fr;gap:20px;margin-bottom:30px}
+}
+
+
+/* Momentary press: crossfade raised and recessed lighting without moving content. */
+:where(.tactile-control){position:relative;isolation:isolate;border-radius:5px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+
+.tactile-control:not(.soft-card)::before,.tactile-control:not(.soft-card)::after{content:"";position:absolute;inset:-5px;border-radius:inherit;pointer-events:none;transition:opacity 650ms cubic-bezier(.4,0,.2,1);opacity:0}
+
+.tactile-control:not(.soft-card)::before{z-index:-1;background:var(--bg);box-shadow:-8px -8px 15px #ffffffb8,8px 8px 15px #aeb1b45c;filter:blur(4px)}
+
+.tactile-control:not(.soft-card)::after{z-index:2;background:linear-gradient(135deg,#aeb1b418,transparent 52%,#ffffff18);box-shadow:inset 8px 8px 13px #92979b70,inset -8px -8px 13px #ffffffb0;filter:blur(3px)}
+
+.tactile-control:not(.card):not(.artwork-open):not(.brand):not(nav a):not(nav button):hover::before{opacity:.65}
+
+.tactile-control:not(.soft-card).is-pressing::before{opacity:0!important}
+
+.tactile-control:not(.soft-card).is-pressing::after{opacity:1}
+
+
+.artwork-open{display:block;width:100%;padding:0;border:0;background:transparent;border-radius:5px;cursor:zoom-in}
+
+.artwork-open.tactile-control:not(.soft-card)::after{inset:0}
+
+.artwork-open:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+
+#artwork-viewer{width:100%;margin:18px 0 0;padding:0;border:0;background:transparent;overflow:hidden;outline-offset:6px}
+
+#artwork-viewer[hidden]{display:none}
+
+#artwork-viewer img{display:block;width:100%;height:auto;border-radius:5px}
+
+.viewer-bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 4px 18px}
+
+.viewer-controls{display:flex;gap:18px;align-items:center}
+
+#artwork-viewer .viewer-round,.film-controls .viewer-round{width:42px;height:42px;display:grid;place-items:center;padding:0;border:0;border-radius:50%;background:transparent;color:var(--ink);font-size:23px;cursor:pointer}
+
+.viewer-count{font-size:13px;color:var(--ink)}
+
+.artwork-open[aria-expanded="true"]{outline:1px solid var(--accent);outline-offset:4px}
+
+@media(prefers-reduced-motion:reduce){.tactile-control:not(.soft-card)::before,.tactile-control:not(.soft-card)::after{transition:none}
+}
+
+
+
+
+@media(prefers-reduced-motion:reduce){.click-ripple{display:none}
+}
+
+.lego-artwork-strip.is-viewing{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+.lego-artwork-strip figure[hidden]{display:none}
+
+.omega-project video{display:block;width:100%;height:auto;border-radius:5px;background:var(--bg)}
+
+.film-controls{padding-top:18px;padding-bottom:4px}
+
+.film-time{font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+.film-seek{flex:1;min-width:30px;height:3px;accent-color:var(--ink);cursor:pointer}
+
+.film-controls .viewer-controls{gap:14px}
+
+.film-controls .viewer-round{font-size:19px;flex-shrink:0}
+
+.film-player:fullscreen{background:#e1e1e1;display:flex;flex-direction:column;justify-content:center;padding:20px}
+
+.film-player:fullscreen video{min-height:0;object-fit:contain;flex:1}
+
+.film-player:fullscreen .film-controls{flex-shrink:0}
+
+@media(max-width:600px){.film-controls{gap:12px}
+.film-controls .viewer-controls{gap:8px}
+.film-controls .viewer-round{width:36px;height:36px}
+}
+
+
+.project-media{display:grid;gap:clamp(12px,1.5vw,24px)}
+
+.project-media-row{display:grid;grid-template-columns:repeat(var(--columns),minmax(0,1fr));gap:clamp(12px,1.5vw,24px);align-items:start}
+
+.project-media-row figure{margin:0;min-width:0}
+
+.project-media-row.single>figure:has(img[height]){width:100%}
+
+.portfolio-project video{display:block;width:100%;height:auto;border-radius:5px}
+
+.portfolio-project .single .film-player:has(video[width="576"]){max-width:720px;margin:auto}
+
+.portfolio-project[data-project-key="kraft"] .project-media-row:nth-child(2){max-width:430px;margin:auto}
+
+.audio-label{font-size:14px;margin-top:22px}
+
+.audio-tour{text-decoration:underline;text-underline-offset:5px}
+
+.film-controls [hidden]{display:none!important}
+
+@media(max-width:700px){.project-media-row{grid-template-columns:1fr}
+.film-controls{flex-wrap:wrap}
+.film-seek{min-width:60px}
+.film-controls .viewer-controls{margin-left:auto}
+}
+
+.portfolio-project[data-project-key="lee-valley"] .project-media{gap:clamp(18px,2vw,32px)}
+
+.portfolio-project[data-project-key="lee-valley"] .project-media-row{gap:clamp(18px,2vw,32px)}
+
+@media(max-width:700px){.portfolio-project[data-project-key="lee-valley"] .project-media-row{grid-template-columns:1fr!important}
+}
+
+.film-controls button>*{pointer-events:none}
+
+.cursor-player video{cursor:default}
+
+
+/* Mockup proportions: quiet warm surfaces, generous outer margins. */
+:root{--bg:#e8e8e6;--accent:#f26723}
+
+.card.soft-card{--surface:var(--bg);padding:clamp(12px,1.05vw,17px)}
+
+@media(min-width:901px){
+ header{inset:0;bottom:auto;display:block}
+
+ .brand{position:absolute;left:6%;top:clamp(20px,2vw,32px);font-size:clamp(32px,2.6vw,40px);transform:none}
+
+ nav{position:fixed;left:auto;right:4.3%;top:clamp(42px,4.8vw,75px);transform:none;gap:0;padding:0}
+
+ nav a,nav button{font-size:clamp(15px,1.15vw,18px);line-height:1.25}
+
+ nav>:nth-child(2),nav>:nth-child(3){margin-top:clamp(20px,2.2vw,34px)}
+
+ main{width:76%;max-width:1240px;margin-left:auto;margin-right:auto;padding-top:clamp(190px,16vw,245px);padding-bottom:140px}
+
+ .grid{gap:clamp(38px,3.6vw,58px) clamp(24px,2.5vw,40px)}
+
+ .caption{font-size:clamp(11px,.84vw,13px);line-height:1.5;padding-top:18px;min-height:68px}
+
+ .caption strong{font-weight:500;letter-spacing:.005em}
+
+ .arrow{top:16px;right:0}
+
+ main.project-page{width:71.2%;max-width:1120px;margin-left:auto;margin-right:auto;padding-top:clamp(185px,20.8vw,310px)}
+
+ .lego-project .project-intro{grid-template-columns:23% 1fr;gap:4%;margin-bottom:clamp(26px,2.8vw,44px)}
+
+ .lego-project .project-intro>div{max-width:530px}
+
+ .lego-project .project-intro h1{font-size:clamp(14px,1.1vw,17px);line-height:1.45}
+
+ .lego-project .project-intro p{font-size:clamp(13px,1vw,15px);line-height:1.75;margin-bottom:16px}
+
+ .lego-project .project-intro .project-credits{font-size:11px;margin-top:18px;letter-spacing:.025em}
+
+}
+
+.project-intro h1 .project-brand{color:var(--accent)}
+
+/* Preserve usable spacing on compact screens. */
+@media(max-width:900px){
+ header{left:6%;right:6%}
+
+ main,main.project-page{width:88%;margin-left:auto;margin-right:auto}
+
+ .card.soft-card{padding:12px}
+
+}
+
+
+
+
+/* Matte membrane: flat at rest, raised on hover, recessed on activation.
+   Lighting is separate from artwork; nothing tilts or follows the pointer. */
+:root {
+  --surface: var(--bg);
+  --settle: cubic-bezier(.22,.75,.18,1);
+}
+
+body { overflow-x:clip; isolation:isolate; -webkit-font-smoothing:antialiased; }
+/* Static microtexture belongs to the substrate, beneath all images and type. */
+body::before {
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27180%27%20height%3D%27180%27%3E%3Cfilter%20id%3D%27grain%27%20x%3D%270%27%20y%3D%270%27%20width%3D%27100%25%27%20height%3D%27100%25%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20type%3D%27saturate%27%20values%3D%270%27%2F%3E%3C%2Ffilter%3E%3Cpath%20fill%3D%27%23fff%27%20filter%3D%27url%28%23grain%29%27%20d%3D%27M0%200h180v180H0z%27%2F%3E%3C%2Fsvg%3E");
+  background-repeat:repeat; opacity:.055; mix-blend-mode:multiply;
+}
+
+main { position: relative; }
+
+.grid { grid-auto-rows: 1fr; }
+
+.grid > .emerge { display:flex; min-width:0; }
+
+.card.soft-card {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  width: 100%; height: 100%;
+  padding: clamp(12px,1.05vw,17px);
+  border:0; border-radius:24px;
+  background: transparent; box-shadow: none;
+  transform-origin: center;
+  transition: none;
+  touch-action: manipulation;
+}
+
+/* The broad outer shoulder fades into the page; the inner slope is diffuse. */
+.card.soft-card::before,
+.card.soft-card::after {
+  content:""; position:absolute; pointer-events:none;
+  border-radius:inherit; opacity:0;
+  transition:opacity 620ms cubic-bezier(.22,.65,.25,1);
+}
+.card.soft-card::before {
+  inset:-12px; z-index:-2;
+  background:var(--surface);
+  box-shadow:-13px -15px 28px #ffffffb0,
+              13px 17px 29px #95988f55;
+  filter:blur(7px);
+}
+.card.soft-card::after {
+  inset:-14px; z-index:-1;
+  background:linear-gradient(140deg,#a3a79e09,transparent 55%,#ffffff0d);
+  box-shadow:inset 15px 18px 31px #92968d48,
+             inset -16px -18px 32px #ffffffa0;
+  filter:blur(7px);
+}
+
+.card.soft-card .soft-card__content { position:relative; z-index:1; display:block; }
+
+.card.soft-card .thumb { border-radius:8px; }
+.caption span { color:#666962; }
+.caption strong { font-weight:500; }
+.arrow { font-weight:400; color:var(--accent); }
+
+.card.soft-card .caption { padding-bottom: 3px; }
+
+@media (hover:hover) {
+
+  .card.soft-card:hover::before { opacity:1; }
+
+}
+
+
+
+.card.soft-card.is-pressing::before { opacity:0; transition-duration:260ms; }
+.card.soft-card.is-pressing::after { opacity:1; transition-duration:260ms; }
+.project-intro h1 .project-brand { display:block; color:var(--accent); }
+.project-intro h1 .project-campaign { display:block; color:#171816; }
+
+.card.soft-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 14px; }
+
+html { scrollbar-gutter:stable; }
+body.is-transitioning { overflow:hidden; }
+body.is-transitioning main { will-change:transform,opacity,filter; }
+
+nav a,nav button,.emerge { animation: none; opacity: 1; }
+
+body.introducing .brand,body.introducing nav>*,body.introducing .grid { opacity:0; }
+
+body.introducing .grid { pointer-events:none; }
+
+@media(max-width:900px) {
+  .grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px 24px; }
+
+  .caption { font-size:12px; line-height:1.45; }
+
+}
+
+@media(max-width:380px) {
+  .grid { grid-template-columns:1fr; }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation-duration:.001ms!important; animation-delay:0s!important; transition:none!important; }
+
+  .card.soft-card { transform:none!important; }
+
+  body.introducing .brand,body.introducing nav>*,body.introducing .grid { opacity:1; }
+
+}
+
+
+/* About / personal profile. The scan is a visual sequence over the supplied portrait. */
+.sr-only { position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+.about-section {
+  position:relative; isolation:isolate; width:88vw; max-width:1500px;
+  margin:clamp(160px,17vw,260px) 0 0; left:50%; transform:translateX(-50%);
+  padding:80px 0 70px; scroll-margin-top:35px;
+}
+.about-section:focus {outline:none;}
+.about-grid { display:grid;grid-template-columns:1.12fr 1.05fr .78fr;gap:30px;align-items:start;grid-template-areas:'bio portrait stats' 'colour portrait stats'; }
+.about-bio {grid-area:bio;padding-top:18px;}
+.about-bio p {font-size:clamp(13px,1.13vw,17px);line-height:1.65;margin:0 0 22px;}
+.about-bio .decipher-text {display:block;}
+.about-bio .decipher-text.is-decoding {color:#6c7168;}
+.about-portrait {grid-area:portrait;position:relative;border-radius:38px;background:#f7f8f6;overflow:hidden;aspect-ratio:.88;box-shadow:inset 1px 1px 0 #fff8;}
+.profile-photo {position:absolute;inset:15% 7% 9%;display:grid;place-items:center;}
+.profile-photo img {display:block;width:100%;height:auto;mix-blend-mode:multiply;mask-image:linear-gradient(#000 88%,transparent 100%);}
+.profile-id,.profile-status {position:absolute;left:24px;right:24px;display:flex;justify-content:space-between;gap:12px;font:9px/1.4 'Courier New',monospace;letter-spacing:.1em;color:#757a71;}
+.profile-id {top:24px;}.profile-status {bottom:22px;}
+.profile-id b {font-weight:400;color:var(--accent);}
+.face-map {position:absolute;inset:0;width:100%;height:100%;color:var(--accent);overflow:visible;pointer-events:none;}
+.face-map path,.face-map line,.face-map polyline {fill:none;stroke:currentColor;stroke-width:1.15;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;opacity:0;}
+.face-map circle {fill:var(--bg);stroke:currentColor;stroke-width:1;vector-effect:non-scaling-stroke;opacity:0;}
+.about-section.scan-active .face-map path,.about-section.scan-active .face-map line,.about-section.scan-active .face-map polyline {stroke-dashoffset:0;opacity:.65;transition:stroke-dashoffset 1800ms ease,opacity 900ms;}
+.about-section.scan-active .face-map circle {opacity:.9;transition:opacity 600ms;transition-delay:var(--delay,0ms);}
+.about-stats {grid-area:stats;display:grid;gap:44px;padding-top:24px;}
+.profile-panel {position:relative;transition:opacity 650ms ease,transform 650ms cubic-bezier(.2,.7,.2,1);}
+.experience-panel {padding:24px 14px 18px;background:var(--accent);color:#fff;clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 27px) calc(100% - 16px),calc(100% - 43px) 100%,0 100%,0 16px);}
+.experience-panel::before {content:"";position:absolute;right:10px;top:9px;width:55%;border-top:1px dashed #ffffffb0;}
+.experience-clock {display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;font-variant-numeric:tabular-nums;}
+.experience-unit {text-align:center;min-width:0;}
+.experience-unit strong {display:block;font-size:clamp(19px,1.8vw,29px);line-height:1.2;font-weight:400;letter-spacing:-.04em;}
+.experience-unit span {display:block;font-size:7px;line-height:2;text-transform:uppercase;letter-spacing:.025em;}
+.experience-panel h3 {font-size:15px;font-weight:400;margin:14px 0 4px;}
+.experience-since {display:block;font:7px/1.6 'Courier New',monospace;letter-spacing:.035em;opacity:.85;}
+.skills-panel {padding:0 13px 8px 17px;border-left:1px solid var(--accent);color:var(--accent);}
+.skills-panel h3 {width:max-content;margin:0 0 18px -25px;padding:8px 29px 8px 10px;color:#fff;background:var(--accent);font-size:15px;font-weight:400;clip-path:polygon(8px 0,100% 0,100% 65%,calc(100% - 17px) 100%,0 100%,0 8px);}
+.skills-list {list-style:none;margin:0;padding:0;display:grid;gap:14px;}
+.skill-label {font-size:10px;display:block;margin-bottom:6px;}
+.skill-track {height:10px;border-radius:10px;background:#f9faf9;box-shadow:inset 2px 2px 4px #c2c7bc38;overflow:hidden;}
+.skill-fill {display:block;height:100%;width:var(--level);border-radius:inherit;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 1200ms cubic-bezier(.18,.75,.2,1);transition-delay:var(--delay);position:relative;overflow:hidden;}
+.skills-visible .skill-fill {transform:scaleX(1);}
+.skill-fill::after {content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent,#ffffff35,transparent);transform:translateX(-120%);}
+.in-view.skills-visible .skill-fill::after {animation:skill-ambient 4800ms ease-in-out infinite;animation-delay:var(--delay);}
+@keyframes skill-ambient {0%,20%{transform:translateX(-120%);}80%,100%{transform:translateX(120%);}}
+.colour-panel {grid-area:colour;align-self:end;display:flex;align-items:center;gap:18px;margin:38px 0 55px 10%;}
+.colour-swatch {width:40%;height:52px;flex-shrink:0;background:#f0ac8f;clip-path:polygon(12px 0,100% 0,100% calc(100% - 18px),calc(100% - 24px) 100%,0 100%,0 12px);border:1px solid #fff;}
+.colour-data h3 {font-size:14px;font-weight:400;color:var(--accent);margin:0 0 7px;}
+.colour-data p {font:11px/1.6 'Courier New',monospace;margin:0;white-space:nowrap;}
+.colour-panel::after {content:"";height:1px;background:var(--accent);flex:1;min-width:20px;align-self:flex-start;margin-top:17px;margin-right:-70px;}
+.about-pending .about-portrait {opacity:0;clip-path:inset(47% 0 47% 0 round 38px);filter:blur(8px);}
+.about-pending.profile-open .about-portrait {opacity:1;clip-path:inset(0 round 38px);filter:blur(0);transition:clip-path 900ms cubic-bezier(.16,.75,.25,1),opacity 500ms,filter 900ms;}
+.about-pending .decipher-text {opacity:0;}
+.about-pending.text-visible .decipher-text {opacity:1;}
+.about-pending .experience-panel,.about-pending .skills-panel,.about-pending .colour-panel {opacity:0;transform:translateY(8px);}
+.about-pending.experience-visible .experience-panel,.about-pending.skills-visible .skills-panel,.about-pending.colour-visible .colour-panel {opacity:1;transform:none;}
+@media(max-width:1050px) and (min-width:761px){
+ .about-grid {grid-template-columns:1fr 1fr;grid-template-areas:'bio portrait' 'colour portrait' 'stats stats';gap:25px;}
+ .about-stats {grid-template-columns:1fr 1fr;gap:45px;align-items:start;}
+ .experience-unit strong {font-size:28px;}.experience-unit span {font-size:9px;}
+ .about-bio p {font-size:15px;}.colour-panel{margin-bottom:10px;}
+}
+@media(max-width:760px){
+ .about-section{width:88vw;margin-top:120px;padding-top:50px;scroll-margin-top:15px;}
+ .about-grid {grid-template-columns:1fr;grid-template-areas:'portrait' 'bio' 'stats' 'colour';gap:28px;}
+ .about-portrait {width:100%;max-width:430px;justify-self:center;border-radius:30px;}
+ .about-bio{padding-top:0;}.about-bio p{font-size:15px;line-height:1.65;}
+ .about-stats{padding-top:0;gap:32px;}.experience-unit strong{font-size:30px;}.experience-unit span{font-size:9px;}
+ .experience-panel{padding:25px 20px 20px;}.experience-since{font-size:8px;}
+ .skill-label{font-size:12px;}.skill-track{height:11px;}.skills-list{gap:17px;}
+ .colour-panel{margin:10px 0 30px;justify-content:center;}.colour-panel::after{display:none;}
+ .about-section::before{right:0;width:68px;height:45px;top:-8px;}.about-section::after{left:0;bottom:0;}
+}
+@media(prefers-reduced-motion:reduce){
+ .about-pending .about-portrait{opacity:1;clip-path:none;filter:none;}
+ .profile-panel,.about-portrait,.skill-fill{transition:none!important;}
+}
+
+.about-bio p {position:relative;}
+.bio-measure {display:block;visibility:hidden;}
+.about-bio .decipher-text {position:absolute;inset:0;overflow:hidden;}
+
+/* Geometry imported from About me-edit.pdf; the portrait shares the page substrate. */
+.about-portrait {background:transparent;box-shadow:none;border-radius:0;overflow:visible;}
+.profile-photo {isolation:auto;background:var(--bg);}
+.profile-photo img {mix-blend-mode:multiply;mask-image:linear-gradient(transparent 0%,#000 5%,#000 87%,transparent 100%);}
+.about-pending .about-portrait {clip-path:none;opacity:0;filter:blur(9px);transform:scale(.985);}
+.about-pending.profile-open .about-portrait {clip-path:none;opacity:1;filter:none;transform:none;transition:opacity 900ms,filter 1000ms,transform 1000ms;}
+.panel-geometry {position:absolute;inset:0;width:100%;height:100%;color:var(--accent);z-index:-1;overflow:visible;}
+.experience-panel {isolation:isolate;background:transparent;clip-path:none;aspect-ratio:277.425/116.346;padding:0;color:#fff;}
+.experience-panel::before {display:none;}
+.experience-clock {position:absolute;left:8%;right:8%;top:30%;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;}
+.experience-unit strong {font-size:clamp(20px,1.85vw,31px);}
+.experience-unit span {font-size:clamp(7px,.65vw,10px);line-height:1.9;}
+.experience-panel h3 {position:absolute;left:5%;bottom:5%;margin:0;font-size:clamp(13px,1.05vw,17px);font-weight:400;}
+.experience-since {display:none;}
+.skills-panel {padding-left:23px;border:0;}
+.skills-panel h3 {position:relative;isolation:isolate;clip-path:none;background:none;margin-left:-25px;width:103px;height:36px;padding:8px 10px;font-size:15px;}
+.skills-tab-geometry {position:absolute;inset:0;width:100%;height:100%;color:var(--accent);z-index:-1;}
+.skill-track {height:12px;border-radius:7px;background:linear-gradient(#f0f2f2,#ffffff);box-shadow:none;}
+.skill-fill {height:calc(100% - 1px);top:.5px;background:linear-gradient(#ff9228,var(--accent));border-radius:7px;box-shadow:inset 0 1px 1px #ffac5a70;}
+.skills-visible .skill-fill {transform:scaleX(0);}
+.bars-filled .skill-fill {transform:scaleX(1);}
+.colour-swatch {border:0;clip-path:none;background:none;height:auto;aspect-ratio:165/61.4;overflow:visible;}
+.colour-panel::after {display:none;}
+.colour-panel {gap:17px;}
+.profile-panel {transform-origin:center;will-change:auto;}
+.about-pending .profile-panel {transform:none;}
+.profile-connectors {position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:3;color:var(--accent);}
+.profile-connectors path {fill:none;stroke:currentColor;stroke-width:.75;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;opacity:0;transition:stroke-dashoffset 1000ms cubic-bezier(.3,0,.2,1),opacity 300ms;}
+.profile-connectors circle {fill:currentColor;opacity:0;transition:opacity 600ms;}
+.link-experience [data-link="experience"] path,.link-skills [data-link="skills"] path,.link-colour [data-link="colour"] path {stroke-dashoffset:0;opacity:.8;}
+.link-experience [data-link="experience"] circle,.link-skills [data-link="skills"] circle,.link-colour [data-link="colour"] circle {opacity:1;}
+.about-pending [data-hud],.about-pending [data-time-unit] {opacity:0;}
+.about-pending .is-decoding,.about-pending .is-decoded {opacity:1;}
+[data-hud] {white-space:nowrap;}
+.about-bio .decipher-text {white-space:normal;}
+.colour-data p [data-hud] {display:block;}
+.face-map .mesh-detail {stroke-width:.6;opacity:0;}
+.scan-active .face-map .mesh-detail {opacity:.38;}
+.face-map .eye-orbit {fill:none;stroke-width:.7;stroke-dasharray:4 10;transform-origin:center;}
+.scan-active .face-map .eye-orbit {opacity:.65;transition-delay:450ms;}
+@media(max-width:1050px) { .profile-connectors path{opacity:0!important;}.profile-connectors circle{opacity:0!important;}.link-skills .skills-panel{border-left:1px solid var(--accent);} }
+@media(max-width:760px){
+ .about-portrait{border-radius:0;}.experience-unit strong{font-size:28px;}.experience-unit span{font-size:9px;}
+ .experience-panel h3{font-size:16px;}.skills-panel h3{height:36px;}.skill-label{font-size:12px;}
+}
+@media(prefers-reduced-motion:reduce){
+ .about-pending .about-portrait{opacity:1;filter:none;transform:none;}
+ .profile-connectors path{transition:none;}.profile-panel{transition:none;}
+ .skill-fill::after{animation:none!important;}
+}
+
+</style></head>
+<body class="introducing"><a class="skip" href="#content">Skip to work</a><header><a id="logo" class="brand lt_anime" aria-label="Jay Bowie — All projects" href="#work"><span class="roll-cell" aria-hidden="true" data-n="0"><span class="roll-track"><span class="roll-face">J</span></span></span><span class="roll-tail"><span class="roll-cell" aria-hidden="true" data-n="1"><span class="roll-track"><span class="roll-face">a</span></span></span><span class="roll-cell" aria-hidden="true" data-n="2"><span class="roll-track"><span class="roll-face">y</span></span></span><span class="roll-cell" aria-hidden="true" data-n="3"><span class="roll-track"><span class="roll-face"> </span></span></span><span class="roll-cell" aria-hidden="true" data-n="4"><span class="roll-track"><span class="roll-face">B</span></span></span><span class="roll-cell" aria-hidden="true" data-n="5"><span class="roll-track"><span class="roll-face">o</span></span></span><span class="roll-cell" aria-hidden="true" data-n="6"><span class="roll-track"><span class="roll-face">w</span></span></span><span class="roll-cell" aria-hidden="true" data-n="7"><span class="roll-track"><span class="roll-face">i</span></span></span><span class="roll-cell" aria-hidden="true" data-n="8"><span class="roll-track"><span class="roll-face">e</span></span></span></span></a><nav aria-label="Main navigation"><a class="active" href="#work">work</a><a href="#about">about</a><a id="resume-link" target="_blank" rel="noopener" aria-label="Resume (PDF, opens in a new tab)">resume</a></nav></header><main id="content" tabindex="-1"></main><button class="replay">Replay introduction</button><dialog><h2></h2><p></p><button autofocus>Close</button></dialog>
+<script>
+document.getElementById("resume-link").href="./assets/jay-bowie-resume-2026.pdf";
+
+
+const wordmark=document.querySelector('.brand'),tail=wordmark.querySelector('.roll-tail'),cells=[...wordmark.querySelectorAll('.roll-cell')];
+let compact=false,busy=false,introDone=false,wanted=true;
+const motionOff=matchMedia('(prefers-reduced-motion: reduce)');
+async function rollName(hide){
+ wanted=hide;if(busy||compact===hide)return;busy=true;
+ const movingCells=cells.slice(1);
+ // Visibility preserves the full wordmark's hover area while its tail is hidden.
+ if(motionOff.matches){tail.style.visibility=hide?'hidden':'visible';compact=hide;busy=false;return;}
+ const shown={transform:'translateY(0)',opacity:1};
+ // Give only y a lower mask and enough travel to clear that edge completely.
+ const hiddenFor=cell=>({transform:cell.dataset.n==='2'?'translateY(1.35em)':'translateY(1.1em)',opacity:1});
+ movingCells.forEach(cell=>{const track=cell.querySelector('.roll-track');Object.assign(track.style,hide?shown:hiddenFor(cell));track.style.clipPath='none';});
+ tail.style.visibility='visible';
+ const starts=[0,30,30,60,90,120,150,180];
+ const motions=movingCells.map((cell,index)=>cell.querySelector('.roll-track').animate(
+  hide?[shown,hiddenFor(cell)]:[hiddenFor(cell),shown],
+  {duration:300,delay:hide?starts[starts.length-1]-starts[index]:starts[index],easing:'ease',fill:'both'}
+ ));
+ await Promise.all(motions.map(m=>m.finished));
+ tail.style.visibility=hide?'hidden':'visible';
+ movingCells.forEach((cell,index)=>{const track=cell.querySelector('.roll-track');Object.assign(track.style,hide?hiddenFor(cell):shown);track.style.clipPath='none';motions[index].cancel()});
+ compact=hide;busy=false;
+ if(wanted!==compact)rollName(wanted);
+}
+
+
+wordmark.addEventListener('pointerenter',()=>{if(introDone)rollName(false)});
+wordmark.addEventListener('pointerleave',()=>{if(introDone)rollName(true)});
+wordmark.addEventListener('focus',()=>{if(introDone)rollName(false)});
+wordmark.addEventListener('blur',()=>{if(introDone)rollName(true)});
+const sprites=["./assets/e0ea057ecf528ac6.jpg", "./assets/2229a09a822423e6.jpg"];const projects=[["LEGO", "What kids see"], ["OMEGA", "Made for wearing"], ["Scotiabank Arena", "Branding"], ["Scotiabank Contact Photography Festival", "#ScotiaGallery"], ["ONEMETH GOODS X MTV", "MTV music x fashion history gallery"], ["KIM CRAWFORD", "Kim Crawford presents\u2026"], ["LEXUS", "Spring radio"], ["JACKSON-TRIGGS X CRACKER BARREL", "Be the holiday hero"], ["ICEBERG VODKA", "Rebranding"], ["TILLEY X LEE VALLEY", "T5 adventure hat"], ["SVEDKA", "Spread the curse to end the curse"], ["KRAFT PEANUT BUTTER", "Peanut butter love"], ["SCOTIABANK", "Banking Essentials"], ["LEE VALLEY", "General art direction"], ["THOM SWEENEY", "You\u2019ll need a suit"], ["NANA\u2019S KITCHEN", "Self published book"]];const content=document.querySelector('main');
+const legoAssets={"01":{"src":"./assets/56b9bb75d0b2d48b.webp","w":1920,"h":1440,"alt":"LEGO giraffe billboard against a red wall"},"02":{"src":"./assets/c8f11969e34e511c.webp","w":1280,"h":720,"alt":"LEGO haunted house campaign on an orange building"},"03":{"src":"./assets/74beb29eba289539.webp","w":2200,"h":1238,"alt":"LEGO dragon poster on a yellow wall"},"04":{"src":"./assets/28032e514520ad3d.webp","w":2128,"h":1493,"alt":"LEGO racecar poster inside a train"},"05":{"src":"./assets/8d83398fb6478f40.webp","w":1280,"h":720,"alt":"LEGO airplane campaign at an airport"},"06":{"src":"./assets/00fdd0bdc1919f3d.webp","w":3579,"h":1959,"alt":"Racecar \u2014 yellow LEGO campaign artwork"},"07":{"src":"./assets/265afa7cf30b4d46.webp","w":3579,"h":1959,"alt":"Airplane \u2014 light blue LEGO campaign artwork"},"08":{"src":"./assets/12fc3225ac7548f5.webp","w":3579,"h":1959,"alt":"Dragon \u2014 blue LEGO campaign artwork"},"09":{"src":"./assets/4b253722c41076a6.webp","w":3579,"h":1959,"alt":"Giraffe \u2014 green LEGO campaign artwork"},"10":{"src":"./assets/fe61e9c4618fd6f0.webp","w":3579,"h":1959,"alt":"Haunted house \u2014 orange LEGO campaign artwork"},"card":{"src":"./assets/514c05cbf525b4a5.webp","w":1750,"h":984,"alt":"LEGO \u2014 What Kids See"}};
+const omegaAssets={"01":{"src":"./assets/e52e64195e4899cc.webp","w":1094,"h":821,"alt":"Omega Made for Space billboard in London"},"02":{"src":"./assets/207495aa08a35d96.webp","w":1572,"h":1001,"alt":"Omega Made for 007 magazine spread"},"03":{"src":"./assets/5b1e4e658e55c5a8.webp","w":1919,"h":1152,"alt":"Omega watch campaign in an underground station"},"04":{"src":"./assets/3806eabf94fb1d31.webp","w":816,"h":576,"alt":"Omega \u2014 Made for speed"},"05":{"src":"./assets/8d2005856eddfc95.webp","w":816,"h":576,"alt":"Omega \u2014 Made for Space"},"06":{"src":"./assets/73946855be343c01.webp","w":816,"h":576,"alt":"Omega \u2014 Made for the extreme"},"07":{"src":"./assets/51bfeff7efb903fc.webp","w":816,"h":576,"alt":"Omega \u2014 Made for pressure"},"08":{"src":"./assets/2b512823d51839a6.webp","w":816,"h":576,"alt":"Omega \u2014 Made for 007"},"card":{"src":"./assets/e52e64195e4899cc.webp","w":1094,"h":821,"alt":"Omega \u2014 Made for Wearing"}};
+const omegaVideo="./assets/8bff87aae7d504e4.webm";
+const thomAssets={"01":{"src":"./assets/7fc6e85fcc31bdc5.webp","w":1535,"h":1025,"alt":"Thom Sweeney campaign magazine spread"},"02":{"src":"./assets/80b00ef79104cabb.webp","w":2550,"h":3300,"alt":"Thom Sweeney \u2014 The Office Christmas Party"},"03":{"src":"./assets/ff791a78d405bb55.webp","w":2550,"h":3300,"alt":"Thom Sweeney \u2014 The Bar Mitzvah"},"04":{"src":"./assets/6e04c15d4e89852d.webp","w":2550,"h":3300,"alt":"Thom Sweeney \u2014 The Wedding"}};
+const portfolioPages={"arena":{"index":2,"title":"Scotiabank Arena","body":["An arena\u2019s identity needs to hold its own against the scale and energy of everything happening around it. For Scotiabank Arena, the design brought that energy into the brand itself.","Built for digital screens and motion, the visual identity allowed the excitement of games, concerts and live events to become part of Scotiabank\u2019s presence. Movement and scale gave the branding the flexibility to feel at home across the building and its surrounding spaces.","The approach also considered how people encountered the arena, from a distance to the entrance. Together, the signage and digital elements created a connected experience that made the new identity part of arriving at an event."],"credits":"Design | Branding","assets":{"01":{"src":"./assets/d6e4d4af20ca8118.webp","w":1920,"h":1080,"kind":"image","mime":"image/webp","alt":"Scotiabank Arena \u2014 SBA-Sign"},"02":{"src":"./assets/80011d77df6e153d.webp","w":1920,"h":1080,"kind":"image","mime":"image/webp","alt":"Scotiabank Arena \u2014 SBA-Logo-Grid"},"03":{"src":"./assets/94b5c1aa6772e99b.webm","w":1920,"h":1080,"kind":"video","mime":"video/webm","alt":"Scotiabank Arena \u2014 Scotiabank CaseStudy02 June2024 v02","ambient":true},"04":{"src":"./assets/a9568814ac1c9367.webm","w":1920,"h":1080,"kind":"video","mime":"video/webm","alt":"Scotiabank Arena \u2014 Scotiabank CaseStudy01 June2024 v05","ambient":true},"05":{"src":"./assets/f99e8872bdfb27d1.webm","w":1080,"h":1080,"kind":"video","mime":"video/webm","alt":"Scotiabank Arena \u2014 Scotiabank CrestLoop HERO 1x1 v03","ambient":true},"06":{"src":"./assets/1f870b12a94c16ff.webp","w":1080,"h":1080,"kind":"image","mime":"image/webp","alt":"Scotiabank Arena \u2014 SBA-Social"},"07":{"src":"./assets/a83407e791e49bdd.webp","w":1920,"h":1080,"kind":"image","mime":"image/webp","alt":"Scotiabank Arena \u2014 SBA-Stationary"},"08":{"src":"./assets/8deb19aeb7649eae.webm","w":1920,"h":1080,"kind":"video","mime":"video/webm","alt":"Scotiabank Arena \u2014 Scotiabank CaseStudy03 June2024 v02","ambient":true},"09":{"src":"./assets/7a3cfbc666de4d50.webp","w":1920,"h":1080,"kind":"image","mime":"image/webp","alt":"Scotiabank Arena \u2014 SBA-Exteriors"},"10":{"src":"./assets/24085397e4b0b03c.webp","w":1920,"h":1080,"kind":"image","mime":"image/webp","alt":"Scotiabank Arena \u2014 SBA-Bowl-Dark"},"11":{"src":"./assets/e3e47b32ed66907a.webp","w":1920,"h":1080,"kind":"image","mime":"image/webp","alt":"Scotiabank Arena \u2014 SBA-Tickets"},"12":{"src":"./assets/bfa02e4ba22313d6.webp","w":1920,"h":1080,"kind":"image","mime":"image/webp","alt":"Scotiabank Arena \u2014 SBA-Doors"},"13":{"src":"./assets/940f642c6124aec1.webp","w":1920,"h":1080,"kind":"image","mime":"image/webp","alt":"Scotiabank Arena \u2014 SBA-Guide"},"card":{"src":"./assets/d6e4d4af20ca8118.webp","w":1920,"h":1080,"kind":"image","alt":"Scotiabank Arena"}},"rows":[["01"],["02"],["03","04"],["05","06"],["07"],["08"],["09","10"],["11","12"],["13"]],"artwork":[]},"contact":{"index":3,"title":"Scotiabank \u2014 CONTACT Photography Festival","body":["Most of us carry a camera everywhere we go. We photograph our friends, our neighbourhoods and little things that catch our attention. Those images say something about how we see the world, but they tend to have a short life in someone else\u2019s feed.","To promote Scotiabank\u2019s CONTACT Photography Festival, we gave those everyday perspectives a public audience. The idea was to turn Toronto into a gallery, with the people who live there supplying the photographs.","The invitation started on digital outdoor screens and social media, asking people to tag their Instagram photos with #ScotiaGallery. Submissions were then gathered in real time and rotated across digital screens and branch windows throughout Toronto. Each photograph appeared alongside its creator\u2019s Instagram handle, giving people credit and a chance to see their work become part of the city.","By bringing the gallery into streets people travelled every day, the campaign made discovering photography\u2014and contributing to it\u2014feel accessible."],"credits":"Concept | Copywriting | Design","assets":{"01":{"src":"./assets/0cea0469c6da131f.webp","w":2000,"h":1333,"kind":"image","mime":"image/webp","alt":"Scotiabank \u2014 CONTACT Photography Festival \u2014 ScotiaGallery-DTMV302-009-lo"},"02":{"src":"./assets/d5f101f5472a8a03.webm","w":1920,"h":1080,"kind":"video","mime":"video/webm","alt":"Scotiabank \u2014 CONTACT Photography Festival \u2014 1026253P-SB-SpringArts-ScotiaGallery-YouTube-1920x1080-Toronto","ambient":true},"03":{"src":"./assets/d096d09b756568b4.webp","w":2000,"h":1333,"kind":"image","mime":"image/webp","alt":"Scotiabank \u2014 CONTACT Photography Festival \u2014 ScotiaGallery-DTSA-6249-lo"},"04":{"src":"./assets/ac946b3cd94b4184.webp","w":2000,"h":1333,"kind":"image","mime":"image/webp","alt":"Scotiabank \u2014 CONTACT Photography Festival \u2014 ScotiaGallery-DTSA-6248-lo"},"05":{"src":"./assets/e67cbbec7cbf0ef0.webp","w":2000,"h":1333,"kind":"image","mime":"image/webp","alt":"Scotiabank \u2014 CONTACT Photography Festival \u2014 ScotiaGallery-DTSA-6257-lo"},"06":{"src":"./assets/38722f5b882fdd4c.webp","w":2000,"h":1333,"kind":"image","mime":"image/webp","alt":"Scotiabank \u2014 CONTACT Photography Festival \u2014 ScotiaGallery-DTSA-6237-lo"},"07":{"src":"./assets/d6f1f0e8688ef109.webp","w":432,"h":576,"kind":"image","mime":"image/webp","alt":"Scotiabank \u2014 CONTACT Photography Festival \u2014 Scotia Arts Gallery Mega Port"},"08":{"src":"./assets/149c702dbb176de3.webp","w":2160,"h":3840,"kind":"image","mime":"image/webp","alt":"Scotiabank \u2014 CONTACT Photography Festival \u2014 Scotia Arts Gallery transit Port"},"card":{"src":"./assets/0cea0469c6da131f.webp","w":2000,"h":1333,"kind":"image","alt":"Scotiabank \u2014 CONTACT Photography Festival"}},"rows":[["01"],["02"],["03","04"],["05","06"]],"artwork":["07","08"]},"onemeth":{"index":4,"title":"ONEMETH \u00d7 MTV Canada \u2014 OMXMTV","body":["Music influences what we wear, and fashion helps define how we remember an artist. OMXMTV explored that exchange through an exclusive capsule collection and a pop-up that doubled as a gallery.","The space took visitors through moments in music and fashion history with a self-guided audio tour and companion playlist. The collection sat within that wider story, giving the collaboration context beyond the clothes."],"credits":"Copywriting | Editing | Design","assets":{"01":{"src":"./assets/4ef78a512e12b1a3.webp","w":1080,"h":718,"kind":"image","mime":"image/webp","alt":"ONEMETH \u00d7 MTV Canada \u2014 OMXMTV \u2014 650994169 18409477273133525 1757402331884292459 n"},"02":{"src":"./assets/a748851b0c222dc1.webp","w":1080,"h":718,"kind":"image","mime":"image/webp","alt":"ONEMETH \u00d7 MTV Canada \u2014 OMXMTV \u2014 654327076 18591226132004070 7236745241709006731 n"},"03":{"src":"./assets/a9e15d0a0978c522.webp","w":1080,"h":718,"kind":"image","mime":"image/webp","alt":"ONEMETH \u00d7 MTV Canada \u2014 OMXMTV \u2014 653312145 18392687797196626 2910291514273318427 n"},"04":{"src":"./assets/c6acfcb47b530bb8.webp","w":1080,"h":718,"kind":"image","mime":"image/webp","alt":"ONEMETH \u00d7 MTV Canada \u2014 OMXMTV \u2014 652659153 18334030732168262 1774613822081188873 n"},"05":{"src":"./assets/0e4aa25d93286509.webp","w":1080,"h":718,"kind":"image","mime":"image/webp","alt":"ONEMETH \u00d7 MTV Canada \u2014 OMXMTV \u2014 654706144 18451175059108323 6746887052629861846 n"},"06":{"src":"./assets/5600efd353f9b96f.webp","w":1080,"h":718,"kind":"image","mime":"image/webp","alt":"ONEMETH \u00d7 MTV Canada \u2014 OMXMTV \u2014 654013487 18366074383165288 1868806988293078382 n"},"07":{"src":"./assets/c30ba77452566030.webp","w":1080,"h":1080,"kind":"image","mime":"image/webp","alt":"ONEMETH \u00d7 MTV Canada \u2014 OMXMTV \u2014 625887279 18329668156170951 1177808307698628695 n"},"card":{"src":"./assets/4ef78a512e12b1a3.webp","w":1080,"h":718,"kind":"image","mime":"image/webp","alt":"ONEMETH \u00d7 MTV Canada \u2014 OMXMTV \u2014 650994169 18409477273133525 1757402331884292459 n"}},"rows":[["01"],["02","03"],["04","05"],["06","07"]],"artwork":[]},"kim-crawford":{"index":5,"title":"Kim Crawford Presents\u2026","body":["When you have people over, it\u2019s often one small detail that gets everyone talking. A familiar dish with an unexpected twist, a drink they haven\u2019t tried before or something that looks almost too good to eat.","\u201cKim Crawford Presents\u2026\u201d brought that spirit to a series of short recipe spots.","Created for digital and television, each 15-second spot offered a taste of what viewers could make, then invited them to get the recipe. It gave Kim Crawford a place in the planning and preparation, as well as the pour."],"credits":"Storyboard | Art Direction","assets":{"01":{"src":"./assets/c0a91d7c8bf2e4d3.webm","w":640,"h":360,"kind":"video","mime":"video/webm","alt":"Kim Crawford Presents\u2026 \u2014 kim-1"},"02":{"src":"./assets/977129fee3187afa.webm","w":640,"h":360,"kind":"video","mime":"video/webm","alt":"Kim Crawford Presents\u2026 \u2014 Kim-2"},"03":{"src":"./assets/b166bf05895a1570.webm","w":640,"h":360,"kind":"video","mime":"video/webm","alt":"Kim Crawford Presents\u2026 \u2014 Kim-3"},"card":{"src":"./assets/625f0295958bb692.webp","w":2560,"h":1418,"kind":"image","alt":"Kim Crawford Presents\u2026"}},"rows":[["01"],["02"],["03"]],"artwork":[]},"lexus":{"index":6,"title":"Lexus \u2014 F SPORT Event: Sounds of Spring","body":["After a Canadian winter, a little birdsong can feel like a big deal. Those first sounds of spring signal that we can finally get outside and enjoy ourselves again. For the Lexus F SPORT Event, we used that familiar feeling to set up a less expected seasonal arrival."],"credits":"Concept | Copywriting | Direction","assets":{"01":{"src":"./assets/d019fa81c846ac86.webm","w":320,"h":240,"kind":"audio","mime":"video/webm","alt":"Lexus \u2014 F SPORT Event: Sounds of Spring \u2014 LXDAR200019R30E Lexus LDA FSport SoundsOfSpring Apr3 30RE FM"},"card":{"src":"./assets/c1fff178390dee12.webp","w":1760,"h":1302,"kind":"image","alt":"Lexus \u2014 F SPORT Event: Sounds of Spring"}},"rows":[["01"]],"artwork":[]},"jackson-triggs":{"index":7,"title":"Jackson-Triggs \u00d7 Cracker Barrel \u2014 Be the Holiday Hero","body":["Holiday entertaining comes with a little pressure. You want to put something on the table that people will enjoy, ideally without spending the entire evening in the kitchen. Sometimes, a dish made for sharing and a well-chosen wine are all it takes.","This holiday spot brought Jackson-Triggs and Cracker Barrel together around that idea.","Created for digital, social and television, the spot offered an appetizing answer to a familiar December question: what should we serve?"],"credits":"Concept | Design | Directing","assets":{"01":{"src":"./assets/0eeade38d0f2d7d7.webm","w":576,"h":720,"kind":"video","mime":"video/webm","alt":"Jackson-Triggs \u00d7 Cracker Barrel \u2014 Be the Holiday Hero \u2014 jacktrigg"},"card":{"src":"./assets/93f343584d3b541e.webp","w":1161,"h":1440,"kind":"image","alt":"Jackson-Triggs \u00d7 Cracker Barrel \u2014 Be the Holiday Hero"}},"rows":[["01"]],"artwork":[]},"iceberg":{"index":8,"title":"Iceberg Vodka \u2014 Rebranding","body":[],"credits":"","assets":{"01":{"src":"./assets/13faf64c293816d6.webp","w":1920,"h":1080,"kind":"image","mime":"image/webp","alt":"Iceberg Vodka \u2014 Rebranding \u2014 Iceberg Labels v4 2"},"02":{"src":"./assets/9fe61ae8a36cd2ca.webp","w":1920,"h":1080,"kind":"image","mime":"image/webp","alt":"Iceberg Vodka \u2014 Rebranding \u2014 Iceberg Labels v4 4"},"03":{"src":"./assets/ec5a6a9343374189.webp","w":1920,"h":1080,"kind":"image","mime":"image/webp","alt":"Iceberg Vodka \u2014 Rebranding \u2014 Iceberg Labels v4 3"},"04":{"src":"./assets/80f96aa7a2fe119a.webp","w":2500,"h":2000,"kind":"image","mime":"image/webp","alt":"Iceberg Vodka \u2014 Rebranding \u2014 sells-sheet-mockup 1"},"05":{"src":"./assets/b28f05dbcf2b1bb2.webp","w":2124,"h":1309,"kind":"image","mime":"image/webp","alt":"Iceberg Vodka \u2014 Rebranding \u2014 Hang-tag"},"card":{"src":"./assets/4f7df3b88ad548e4.webp","w":1276,"h":1080,"kind":"image","alt":"Iceberg Vodka \u2014 Rebranding"}},"rows":[["01"],["02","03"],["04","05"]],"artwork":[]},"tilley":{"index":9,"title":"Tilley \u00d7 Lee Valley \u2014 Adventure Hat","body":["The Tilley \u00d7 Lee Valley Adventure Hat brought together two Canadian brands with a shared appreciation for practical design and lasting quality. It was a natural partnership: a hat made for getting outside, for people who value the thought and care behind the things they use.","The creative reflected that connection, rooted in Canadian craftsmanship and outdoor culture, the story focused on a product people could see themselves wearing for years.","All units sold out in the first week."],"credits":"Copywriting | Product Design | Art Direction","assets":{"01":{"src":"./assets/11aeb83646c1a630.webp","w":6147,"h":2200,"kind":"image","mime":"image/webp","alt":"Tilley \u00d7 Lee Valley \u2014 Adventure Hat \u2014 TILLEY X LEE VALLEY 2024.10.18"},"02":{"src":"./assets/d53d45280c2887c3.webp","w":2400,"h":2400,"kind":"image","mime":"image/webp","alt":"Tilley \u00d7 Lee Valley \u2014 Adventure Hat \u2014 HT9051 Lee Valley x T5 Natural  034"},"03":{"src":"./assets/5b769bd714a6c854.webp","w":2400,"h":2400,"kind":"image","mime":"image/webp","alt":"Tilley \u00d7 Lee Valley \u2014 Adventure Hat \u2014 HT9051 Lee Valley x T5 Natural  042"},"04":{"src":"./assets/92de46c211f0084d.mp4","w":1280,"h":720,"kind":"video","mime":"video/mp4","alt":"Tilley \u00d7 Lee Valley \u2014 Adventure Hat \u2014 looking","cursorScrub":true},"05":{"src":"./assets/675b6e7e23c80a38.webp","w":3000,"h":3000,"kind":"image","mime":"image/webp","alt":"Tilley \u00d7 Lee Valley \u2014 Adventure Hat \u2014 Tilley-Bus"},"06":{"src":"./assets/2bf3a2827d1b463e.webp","w":6600,"h":8400,"kind":"image","mime":"image/webp","alt":"Tilley \u00d7 Lee Valley \u2014 Adventure Hat \u2014 Tilley-Store Store Poster-22x28"},"07":{"src":"./assets/a2c3e2ab50622f88.webp","w":1275,"h":1650,"kind":"image","mime":"image/webp","alt":"Tilley \u00d7 Lee Valley \u2014 Adventure Hat \u2014 TilleyLV Anatomy 8.5x11 v1 Digital"},"08":{"src":"./assets/a6bac72f86ef3ad9.webp","w":6600,"h":8400,"kind":"image","mime":"image/webp","alt":"Tilley \u00d7 Lee Valley \u2014 Adventure Hat \u2014 Tilley-Store Store Poster-22x282"},"card":{"src":"./assets/5b769bd714a6c854.webp","w":2400,"h":2400,"kind":"image","alt":"Tilley \u00d7 Lee Valley \u2014 Adventure Hat"}},"rows":[["01"],["02","03"],["04"],["05"],["06","07","08"]],"artwork":[]},"svedka":{"index":10,"title":"Svedka \u2014 Spread the Curse to End the Curse","body":["There\u2019s something a little unsettling about an ad that follows you around the internet. For Halloween, Svedka leaned into that feeling and turned it into a curse.","Watching the campaign\u2019s main video sets things in motion. From there, viewers were stalked by highly targeted ads, with messages tailored to specific scenarios. The way out was simple: share the original video and pass the curse on to someone else.","More than 200 scenarios were created to keep the haunting specific, surprising and funny. Each encounter gave the curse another opportunity to show up, making the follow-up ads part of the entertainment.","The idea gave people a suitably selfish reason to share. You weren\u2019t sending your friends a Halloween greeting. You were saving yourself and making it their problem."],"credits":"| Copywriting |","assets":{"01":{"src":"./assets/eef99a1c207c2bf1.webm","w":640,"h":360,"kind":"video","mime":"video/webm","alt":"Svedka \u2014 Spread the Curse to End the Curse \u2014 svedka-curse-video-a87f2c5b0aa89097c26c61d3e7"},"02":{"src":"./assets/f493824d3c099b3a.webm","w":640,"h":360,"kind":"video","mime":"video/webm","alt":"Svedka \u2014 Spread the Curse to End the Curse \u2014 svedka-bathing-in-online-data-fc16665d59ad32d74714194258","ambient":true},"03":{"src":"./assets/6ddefce0b0292a86.webm","w":640,"h":360,"kind":"video","mime":"video/webm","alt":"Svedka \u2014 Spread the Curse to End the Curse \u2014 svedka-wrong-vodka-6036c552a7a00ec0be64530586","ambient":true},"04":{"src":"./assets/7d9dbfa4d8327eef.webm","w":640,"h":360,"kind":"video","mime":"video/webm","alt":"Svedka \u2014 Spread the Curse to End the Curse \u2014 svedka-on-your-phone-605d475441bb32856c488e4113","ambient":true},"05":{"src":"./assets/aec7c8be5ea020d2.webm","w":640,"h":360,"kind":"video","mime":"video/webm","alt":"Svedka \u2014 Spread the Curse to End the Curse \u2014 svedka-mean-things-cfe52c51828cea1e366df56054","ambient":true},"card":{"src":"./assets/9d7c4b67dfadd3fa.webp","w":2412,"h":1356,"kind":"image","alt":"Svedka \u2014 Spread the Curse to End the Curse"}},"rows":[["01"],["02","03"],["04","05"]],"artwork":[]},"kraft":{"index":11,"title":"Kraft \u2014 I love Peanut Butter","body":["There\u2019s a small problem with telling someone how much you love peanut butter while you\u2019re eating it. The words don\u2019t always come out quite right.","That familiar struggle became the idea for this Kraft campaign. People try to say \u201cI love peanut butter\u201d with a mouthful of it, turning a simple declaration into something a little less articulate. Even the dog gets a word in. You might not catch every syllable, but the feeling is clear.","The humour comes from something anyone who loves peanut butter will recognise: it sticks to the roof of your mouth, makes talking difficult and still has you reaching for another spoonful. That stickiness becomes an affectionate reminder of exactly what people enjoy about it.","Designed to extend across print, outdoor, social and television, the idea works both as a line you have to decipher and a voice you have to listen to a little more closely."],"credits":"Concept | Copywriting | Design","assets":{"01":{"src":"./assets/3a78ee008a605f54.webp","w":4272,"h":3523,"kind":"image","mime":"image/webp","alt":"Kraft \u2014 I love Peanut Butter \u2014 cgvtszjavo8f1"},"02":{"src":"./assets/a0bfd6df42e5cad1.webp","w":1000,"h":2050,"kind":"image","mime":"image/webp","alt":"Kraft \u2014 I love Peanut Butter \u2014 insta-post"},"03":{"src":"./assets/cb2c06b61fc1e5b0.webp","w":1675,"h":2175,"kind":"image","mime":"image/webp","alt":"Kraft \u2014 I love Peanut Butter \u2014 master PB-girl"},"04":{"src":"./assets/476e530b8537ef3c.webp","w":1675,"h":2175,"kind":"image","mime":"image/webp","alt":"Kraft \u2014 I love Peanut Butter \u2014 master PB-boy"},"05":{"src":"./assets/b61e1a5f5fce8626.webp","w":1675,"h":2175,"kind":"image","mime":"image/webp","alt":"Kraft \u2014 I love Peanut Butter \u2014 master PB-dog"},"card":{"src":"./assets/3a78ee008a605f54.webp","w":4272,"h":3523,"kind":"image","alt":"Kraft \u2014 I love Peanut Butter"}},"rows":[["01"],["02"],["03","04","05"]],"artwork":[]},"banking":{"index":12,"title":"Scotiabank \u2014 Banking Essentials","body":["Most people don\u2019t spend much time exploring their banking app. They learn how to do what they need and stick with it. Useful features can easily go unnoticed, especially when trying something new involves your money.","Scotiabank Banking Essentials was created to help customers get more comfortable with online and mobile banking. The videos introduced features through familiar tasks, from paying bills and sending money to depositing a cheque with a phone.","By showing what to do alongside why it\u2019s useful, the series gave customers a reason to try something different. The aim was to make those first few taps feel familiar\u2014and help people spend less time figuring out their banking."],"credits":"Storyboard | Design","assets":{"01":{"src":"./assets/25ea206845313a89.webm","w":640,"h":360,"kind":"video","mime":"video/webm","alt":"Scotiabank \u2014 Banking Essentials \u2014 scotiabanming"},"02":{"src":"./assets/8c5af0b685955922.webm","w":640,"h":360,"kind":"video","mime":"video/webm","alt":"Scotiabank \u2014 Banking Essentials \u2014 scotiabanming2"},"card":{"src":"./assets/c7c91edb5b174eb0.webp","w":1682,"h":1337,"kind":"image","alt":"Scotiabank \u2014 Banking Essentials"}},"rows":[["01"],["02"]],"artwork":[]},"lee-valley":{"index":13,"title":"Lee Valley \u2014 Art Direction","body":["At Lee Valley, I work on set with the in-house photographers on a daily basis. Below is a selection of my favourite photographs I\u2019ve art directed, from product studies to seasonal scenes."],"credits":"Art Direction","assets":{"01":{"src":"./assets/8b411fd6912f7b1f.webp","w":2425,"h":1080,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Veneer  0057"},"02":{"src":"./assets/f1dab988994d0454.webp","w":964,"h":542,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 K1218 U 0148"},"03":{"src":"./assets/b815e65390725b4a.webp","w":1080,"h":1168,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Christmas Changeover0218"},"04":{"src":"./assets/e1387a6edc8d4207.webp","w":1080,"h":1591,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Christmas Changeover0334"},"05":{"src":"./assets/db045fa754e490dc.webp","w":2888,"h":1111,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Dimensional-Wood-Boards-2888x1111-1"},"06":{"src":"./assets/46cad478d015eb66.webp","w":2888,"h":1111,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Dowel-Rods-2888x1111-1"},"07":{"src":"./assets/c2deb08d9b2dd6b7.webp","w":964,"h":542,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 For the Outdoors 0105"},"08":{"src":"./assets/55b4ee972d83ce18.webp","w":1080,"h":1001,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Ice Cream Web U 0073"},"09":{"src":"./assets/b77b160dfcd85c31.webp","w":1080,"h":542,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Mothers Day Gift Card F 0073"},"10":{"src":"./assets/b80f2a8ed7c0a5fa.webp","w":1512,"h":1080,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 PastaXmas U 0048"},"11":{"src":"./assets/e4bc3914c79652a6.webp","w":1920,"h":1080,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 PD214 D 0115"},"12":{"src":"./assets/50a6960403d8855b.webp","w":2807,"h":1080,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Project Wood Bowl Blanks U 0278"},"13":{"src":"./assets/b5eb2b2f5747d6cc.webp","w":1737,"h":1080,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Project Wood Hobby Blanks U 0055"},"14":{"src":"./assets/bf1f5d3f5f76cbf3.webp","w":1001,"h":1080,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Tree Leather Lunch Bag U 0020"},"15":{"src":"./assets/28dbb501a1dab85f.webp","w":1080,"h":809,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Tree Leather Lunchbag U 0193"},"16":{"src":"./assets/3b598bc51884949f.webp","w":1984,"h":1080,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Veneer 3 0001"},"17":{"src":"./assets/db0552f211376b99.webp","w":1623,"h":1080,"kind":"image","mime":"image/webp","alt":"Lee Valley \u2014 Art Direction \u2014 Veneer  0066"},"card":{"src":"./assets/43cbc37cfef6418c.webp","w":1080,"h":1080,"kind":"image","alt":"Lee Valley \u2014 Art Direction"}},"rows":[["01"],["16","17"],["05","06"],["12","13"],["02","11"],["07"],["03","04"],["10","08"],["09"],["14","15"]],"artwork":[]},"nanas-kitchen":{"index":15,"title":"Nana\u2019s Kitchen","body":["Family recipes carry more than ingredients and instructions. They remind us of the person who made them, the kitchen we gathered in and the dishes we always hoped were on the menu.","Nana\u2019s Kitchen brings together more than 200 of my Nana\u2019s recipes in a cookbook designed to be used and passed down. Photographs from her kitchen and more than 150 hand-drawn ingredient icons capture the authenticity of a family cookbook.","I wanted the finished book to feel personal and cared for, with enough structure to make a large collection approachable. A place to keep her recipes together\u2014and a way to keep making them."],"credits":"Design | Art Direction | illustration | Publishing","assets":{"01":{"src":"./assets/e37cef36496b28eb.webp","w":1080,"h":1049,"kind":"image","mime":"image/webp","alt":"Nana\u2019s Kitchen \u2014 Book in Hand"},"02":{"src":"./assets/4144897cce44c83a.webp","w":1080,"h":720,"kind":"image","mime":"image/webp","alt":"Nana\u2019s Kitchen \u2014 Opened Book-1"},"03":{"src":"./assets/17397d2ef75e587a.webp","w":1080,"h":769,"kind":"image","mime":"image/webp","alt":"Nana\u2019s Kitchen \u2014 hand drawn icons"},"04":{"src":"./assets/11394adfb26d06dd.webp","w":1080,"h":720,"kind":"image","mime":"image/webp","alt":"Nana\u2019s Kitchen \u2014 Hardcover Opened Book Mockup-2"},"card":{"src":"./assets/e37cef36496b28eb.webp","w":1080,"h":1049,"kind":"image","alt":"Nana\u2019s Kitchen"}},"rows":[["01"],["02"],["03"],["04"]],"artwork":[]}};
+function legoImage(key,priority=false){const a=legoAssets[key];return `<img src="${a.src}" width="${a.w}" height="${a.h}" alt="${a.alt}" loading="${priority?'eager':'lazy'}" decoding="async" ${priority?'fetchpriority="high"':''}>`;}
+function thumb(i){const entry=Object.values(portfolioPages).find(p=>p.index===i);if(entry)return `background-image:url('${entry.assets.card.src}');background-size:cover;background-position:center`;if(i===14)return `background-image:url('${thomAssets['01'].src}');background-size:cover;background-position:center`;if(i===1)return `background-image:url('${omegaAssets.card.src}');background-size:cover;background-position:center`;if(i===0)return `background-image:url('${legoAssets.card.src}');background-size:cover;background-position:center`;const xs=[238,540,833,1107],ys=[263,552,842,1131];return `background-image:url('${sprites[0]}');background-position:${xs[i%4]/(1568-229)*100}% ${ys[Math.floor(i/4)]/(1580-160)*100}%`}
+function piece(x,y,w,h,cls=''){return `<div role="img" aria-label="LEGO What kids see campaign artwork" class="piece ${cls}" style="aspect-ratio:${w}/${h};background-image:url('${sprites[1]}');background-size:${933/w*100}% ${2048/h*100}%;background-position:${x/(933-w)*100}% ${y/(2048-h)*100}%"></div>`}
+function omegaImage(key,priority=false){const a=omegaAssets[key];return `<img src="${a.src}" width="${a.w}" height="${a.h}" alt="${a.alt}" loading="${priority?'eager':'lazy'}" decoding="async">`;}
+function omegaPage(){return `<article class="lego-project omega-project"><section class="project-intro"><h1><span class="project-brand">Omega</span> <span class="project-campaign">Made to wear</span></h1><div><p>A watch can be admired for its design, its movement or its value. But the stories that make it interesting happen when someone puts it on.</p><p>“Made for Wearing” explores that idea through Omega’s connections to exploration, sport and cinema. From the lunar surface to the world of James Bond, the campaign brings those stories into the watches themselves, giving each piece a sense of the life beyond its glass.</p><p>Created for out-of-home, magazines, digital advertising and television, the campaign gives “Made for Wearing” meaning beyond everyday use. These are objects designed to take part in life, with all the demands, discoveries and stories that come with them.</p><p class="project-credits">Concept | Copywriting | Design | Directing</p></div></section><div class="lego-hero">${omegaImage('01',true)}</div><section class="lego-gallery" aria-label="Omega campaign installations"><div class="lego-gallery-row" style="grid-template-columns:1.5704fr 1.6658fr">${['02','03'].map(key=>`<figure>${omegaImage(key)}</figure>`).join('')}</div><div class="film-player"><video muted playsinline ${matchMedia('(prefers-reduced-motion: reduce)').matches?'':'autoplay'} preload="metadata" width="1280" height="720" poster="${omegaAssets['04'].src}" aria-label="Omega — Made for Wearing campaign film"><source src="${omegaVideo}" type="video/webm">Your browser does not support WebM video.</video><div class="viewer-bar film-controls" role="group" aria-label="Film controls"><span class="film-time">0:00 / 0:22</span><input class="film-seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="Video position"><div class="viewer-controls"><button type="button" class="viewer-round" data-film="play" aria-label="Play film">▶</button><button type="button" class="viewer-round" data-film="sound" aria-label="Unmute film" aria-pressed="false"></button><button type="button" class="viewer-round" data-film="fullscreen" aria-label="Enter fullscreen">⛶</button></div></div></div></section><section class="lego-artwork-strip" aria-label="Five Omega campaign artworks">${['04','05','06','07','08'].map(key=>`<figure><button type="button" class="artwork-open" data-artwork="${key}" aria-controls="artwork-viewer" aria-expanded="false" aria-label="Enlarge ${omegaAssets[key].alt}">${omegaImage(key)}</button></figure>`).join('')}</section><footer class="project-footer"><a href="#work">All projects</a><a href="#arena">Next project →</a></footer></article>`;}
+let filmCleanups=[];
+function setupFilm(){filmCleanups.forEach(fn=>fn());filmCleanups=[];document.querySelectorAll('.film-player').forEach(setupFilmPlayer);}
+function setupAmbientPlayer(player){
+ const video=player.querySelector('video'),reduce=matchMedia('(prefers-reduced-motion: reduce)');let visible=false;
+ video.muted=true;video.loop=true;
+ const sync=()=>{if(visible&&!reduce.matches)video.play().catch(()=>{});else video.pause();};
+ const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();},{threshold:.15});observer.observe(player);
+ reduce.addEventListener('change',sync);
+ filmCleanups.push(()=>{observer.disconnect();reduce.removeEventListener('change',sync);video.pause();});
+}
+function setupCursorPortrait(player){
+ const video=player.querySelector('video'),reduce=matchMedia('(prefers-reduced-motion: reduce)');
+ let target=1.05,visible=false,frame=0,disposed=false,lastStep=0;
+ video.muted=true;video.pause();
+ const advance=()=>{
+  frame=0;if(disposed||video.readyState<2||video.seeking)return;
+  const goal=Math.min(target,Math.max(0,video.duration-.05)),delta=goal-video.currentTime;
+  if(Math.abs(delta)<.018)return;
+  const now=performance.now(),dt=Math.min(34,Math.max(8,lastStep?now-lastStep:16));lastStep=now;
+  const eased=delta*(1-Math.exp(-dt/145)),limit=1.8*dt/1000;
+  video.currentTime=reduce.matches?goal:video.currentTime+Math.max(-limit,Math.min(limit,eased));
+ };
+ const schedule=()=>{if(!frame&&!disposed)frame=requestAnimationFrame(advance);};
+ const centre=()=>{target=1.05;schedule();};
+ const move=e=>{
+  if(!visible||reduce.matches||e.pointerType==='touch')return;
+  const r=player.getBoundingClientRect(),x=Math.max(0,Math.min(1,(e.clientX-r.left)/r.width));
+  target=x<=.5?.05+x*2:1.05+(x-.5)*2*2.35;schedule();
+ };
+ const ready=()=>{video.pause();schedule();};
+ const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(!visible)centre();},{threshold:.1});observer.observe(player);
+ video.addEventListener('loadeddata',ready);video.addEventListener('seeked',schedule);
+ document.addEventListener('pointermove',move);document.documentElement.addEventListener('pointerleave',centre);reduce.addEventListener('change',centre);
+ if(video.readyState>=2)ready();
+ filmCleanups.push(()=>{disposed=true;cancelAnimationFrame(frame);observer.disconnect();video.removeEventListener('loadeddata',ready);video.removeEventListener('seeked',schedule);document.removeEventListener('pointermove',move);document.documentElement.removeEventListener('pointerleave',centre);reduce.removeEventListener('change',centre);video.pause();});
+}
+function setupFilmPlayer(player){
+ if(player.classList.contains('cursor-player')){setupCursorPortrait(player);return;}
+ if(player.classList.contains('ambient-player')){setupAmbientPlayer(player);return;}
+ const video=player.querySelector('video,audio'),play=player.querySelector('[data-film="play"]'),sound=player.querySelector('[data-film="sound"]'),full=player.querySelector('[data-film="fullscreen"]'),seek=player.querySelector('.film-seek'),time=player.querySelector('.film-time');
+ const clock=n=>Math.floor(n/60)+':'+String(Math.floor(n%60)).padStart(2,'0');
+ let lastMuted=null;
+ const sync=()=>{
+  play.textContent=video.paused?'▶':'Ⅱ';play.setAttribute('aria-label',video.paused?'Play film':'Pause film');
+  sound.setAttribute('aria-label',video.muted?'Unmute film':'Mute film');sound.setAttribute('aria-pressed',String(!video.muted));
+  if(lastMuted!==video.muted){lastMuted=video.muted;sound.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4Z"/>'+(video.muted?'<path d="m16 9 6 6m0-6-6 6"/>':'<path d="M15 8q5 4 0 8M18 5q8 7 0 14"/>')+'</svg>';}
+  const duration=Number.isFinite(video.duration)?video.duration:0;
+  seek.disabled=!duration;seek.value=duration?video.currentTime/duration*100:0;
+  time.textContent=clock(video.currentTime)+' / '+clock(duration);
+  seek.setAttribute('aria-valuetext',clock(video.currentTime)+' of '+clock(duration));
+ };
+ let userPaused=false;play.addEventListener('click',()=>{userPaused=!video.paused;if(video.paused)video.play().catch(sync);else video.pause();});
+ sound.addEventListener('click',()=>{video.muted=!video.muted;if(!video.muted&&video.volume===0)video.volume=1;sync();});
+ seek.addEventListener('input',()=>{if(Number.isFinite(video.duration))video.currentTime=Number(seek.value)/100*video.duration;});
+ full.addEventListener('click',()=>{if(document.fullscreenElement===player)document.exitFullscreen().catch(()=>{});else if(player.requestFullscreen)player.requestFullscreen().catch(()=>{});else if(video.webkitEnterFullscreen)video.webkitEnterFullscreen();});
+ if(video.tagName==='AUDIO'||(!player.requestFullscreen&&!video.webkitEnterFullscreen))full.hidden=true;
+ ['play','pause','ended','volumechange','timeupdate','loadedmetadata','durationchange'].forEach(event=>video.addEventListener(event,sync));
+ player.addEventListener('fullscreenchange',()=>full.setAttribute('aria-label',document.fullscreenElement===player?'Exit fullscreen':'Enter fullscreen'));
+ video.muted=video.tagName!=='AUDIO';video.removeAttribute('autoplay');sync();
+ const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting&&!userPaused&&video.tagName!=='AUDIO'&&!matchMedia('(prefers-reduced-motion: reduce)').matches)video.play().catch(sync);else if(!entry.isIntersecting)video.pause();}},{threshold:.25});observer.observe(player);filmCleanups.push(()=>{observer.disconnect();video.pause();});
+}
+function thomImage(key,priority=false){const a=thomAssets[key];return `<img src="${a.src}" width="${a.w}" height="${a.h}" alt="${a.alt}" loading="${priority?'eager':'lazy'}" decoding="async">`;}
+function thomPage(){return `<article class="lego-project thom-project"><section class="project-intro"><h1><span class="project-brand">Thom Sweeney</span> <span class="project-campaign">You’ll Need a Suit</span></h1><div><p>Some occasions come with a dress code and a sense of obligation. You know there’ll be long speeches, awkward conversations and someone who really shouldn’t have another drink. You’ve already agreed to go. You might as well look good.</p><p>“You’ll Need a Suit” takes an honest, slightly cynical look at the events we dress up for. The copy says what people might be thinking but would never say into the microphone.</p><p>Each ad lets that story unfold before arriving at the same practical conclusion: “But either way, you’ll need a suit.” It gives Thom Sweeney a role in the evening that feels refreshingly believable. A great suit won’t shorten the speeches, but it’s one part of the occasion you can feel good about.</p><p>Created for print, the campaign pairs conversational, irreverent copy with restrained typography. The tailoring keeps its composure while the writing has a little fun.</p><p class="project-credits">Concept | Copywriting | Design</p></div></section><div class="lego-hero">${thomImage('01',true)}</div><section class="lego-artwork-strip" style="grid-template-columns:repeat(3,minmax(0,1fr))" aria-label="Three Thom Sweeney print ads">${['02','03','04'].map(key=>`<figure>${thomImage(key)}</figure>`).join('')}</section><footer class="project-footer"><a href="#work">All projects</a><a href="#nanas-kitchen">Next project →</a></footer></article>`;}
+
+const projectRoutes=['lego','omega','arena','contact','onemeth','kim-crawford','lexus','jackson-triggs','iceberg','tilley','svedka','kraft','banking','lee-valley','thom-sweeney','nanas-kitchen'];
+function escapeText(text){return String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function mediaControls(){return `<div class="viewer-bar film-controls" role="group" aria-label="Playback controls"><span class="film-time">0:00</span><input class="film-seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="Playback position"><div class="viewer-controls"><button type="button" class="viewer-round" data-film="play" aria-label="Play">▶</button><button type="button" class="viewer-round" data-film="sound" aria-label="Unmute" aria-pressed="false"></button><button type="button" class="viewer-round" data-film="fullscreen" aria-label="Enter fullscreen">⛶</button></div></div>`;}
+function projectMedia(page,key,priority=false){const a=page.assets[key];
+ if(a.kind==='image')return `<img src="${a.src}" width="${a.w}" height="${a.h}" alt="${escapeText(a.alt)}" loading="${priority?'eager':'lazy'}" decoding="async">`;
+ if(a.cursorScrub)return `<div class="film-player cursor-player"><video muted playsinline preload="auto" width="${a.w}" height="${a.h}" aria-label="Tilley portrait turns to follow the pointer"><source src="${a.src}" type="${a.mime}"></video></div>`;
+ if(a.ambient)return `<div class="film-player ambient-player"><video muted loop playsinline preload="metadata" width="${a.w}" height="${a.h}" aria-label="${escapeText(a.alt)}"><source src="${a.src}" type="${a.mime}"></video></div>`;
+ if(a.kind==='audio')return `<div class="film-player audio-player"><p class="audio-label">Sounds of Spring · 30-second radio spot</p><audio preload="metadata" aria-label="Lexus Sounds of Spring radio spot"><source src="${a.src}" type="audio/webm"></audio>${mediaControls()}</div>`;
+ return `<div class="film-player"><video muted playsinline preload="metadata" width="${a.w}" height="${a.h}" aria-label="${escapeText(a.alt)}"><source src="${a.src}" type="${a.mime}"></video>${mediaControls()}</div>`;
+}
+function projectFooter(slug){const i=projectRoutes.indexOf(slug),next=projectRoutes[(i+1)%projectRoutes.length];return `<footer class="project-footer"><a href="#work">All projects</a><a href="#${next}">Next project →</a></footer>`;}
+function projectHeading(title){
+ const named={'Kim Crawford Presents…':['Kim Crawford','Presents…'],'Scotiabank Arena':['Scotiabank Arena','Branding'],'Nana’s Kitchen':['Nana’s Kitchen','Self-published book']};
+ const parts=named[title]||title.split(' — ');const brand=parts.shift(),campaign=parts.join(' — ');
+ return `<span class="project-brand">${escapeText(brand)}</span>${campaign?' <span class="project-campaign">'+escapeText(campaign)+'</span>':''}`;
+}
+function portfolioPage(slug){const p=portfolioPages[slug];return `<article class="lego-project portfolio-project" data-project-key="${slug}"><section class="project-intro"><h1>${projectHeading(p.title)}</h1><div>${p.body.map(t=>`<p>${escapeText(t)}</p>`).join('')}${p.credits?`<p class="project-credits">${escapeText(p.credits)}</p>`:''}${slug==='onemeth'?'<p><a class="audio-tour" href="https://soundcloud.com/onemeth/sets/omxmtv" target="_blank" rel="noopener noreferrer">Listen to the audio tour ↗</a></p>':''}</div></section><section class="project-media" aria-label="Project gallery">${p.rows.map((row,i)=>`<div class="project-media-row ${row.length===1?'single':''}" style="--columns:${row.length};${slug==='lee-valley'?'grid-template-columns:'+row.map(key=>(p.assets[key].w/p.assets[key].h)+'fr').join(' '):''}">${row.map(key=>`<figure>${projectMedia(p,key,i===0)}</figure>`).join('')}</div>`).join('')}</section>${p.artwork.length?`<section class="lego-artwork-strip" style="grid-template-columns:repeat(${p.artwork.length},minmax(0,1fr))" aria-label="Campaign artwork">${p.artwork.map(key=>`<figure><button type="button" class="artwork-open" data-artwork="${key}" aria-controls="artwork-viewer" aria-expanded="false" aria-label="Enlarge ${escapeText(p.assets[key].alt)}">${projectMedia(p,key)}</button></figure>`).join('')}</section>`:''}${projectFooter(slug)}</article>`;}
+const profilePortrait="./assets/e3f8e7d953e0f078.png";
+// About content follows the supplied layout. Bar lengths reproduce that artwork.
+const profileBiography = [
+ 'With experience in copywriting and design for clients big and small, Jay Bowie brings a versatile approach to every project. His ability to “dual-wield” these skills allows him to see challenges from all angles and deliver creative, well-rounded solutions that truly resonate.',
+ 'Beyond work, Jay is passionate about his motorcycle, staying active, and creating cool things from scratch. He’s a movie buff, a music lover, and an unapologetic nerd who’s always up for a good debate—whether it’s about Batman vs. Superman, the greatest Pokémon, or the eternal question of who shot first: Han or Greedo.'
+];
+const profileSkills = [['Photoshop',94],['Illustrator',90],['InDesign',83],['Fusion 360',61],['Figma',73],['SketchUp',81],['Google Web Developer',76]];
+let aboutCleanup = null;
+function aboutMarkup(){
+ const points=[[335,475],[450,490],[535,485],[705,485],[780,490],[914,477],[300,675],[326,777],[382,900],[484,1030],[635,1074],[772,1020],[876,886],[935,768],[962,670],[580,699],[674,699],[525,855],[737,855],[637,320]];
+ return `<section id="about" class="about-section" aria-labelledby="about-heading" tabindex="-1">
+ <h2 id="about-heading" class="sr-only">About Jay Bowie</h2><svg class="profile-connectors" aria-hidden="true"><g data-link="experience"><path pathLength="1"/><circle r="2"/><circle r="2"/></g><g data-link="skills"><path pathLength="1"/><circle r="2"/><circle r="2"/></g><g data-link="colour"><path pathLength="1"/><circle r="2"/><circle r="2"/></g></svg>
+ <div class="about-grid">
+ <div class="about-bio">${profileBiography.map(text=>`<p><span class="sr-only">${escapeText(text)}</span><span class="bio-measure" aria-hidden="true">${escapeText(text)}</span><span class="decipher-text" aria-hidden="true">${escapeText(text)}</span></p>`).join('')}</div>
+ <div class="about-portrait">
+  <div class="profile-id" aria-hidden="true"><b data-hud>PROFILE / 001</b><span data-hud>JAY BOWIE</span></div>
+  <div class="profile-photo"><img src="${profilePortrait}" width="1269" height="1240" alt="Portrait of Jay Bowie" decoding="async" loading="lazy">
+   <svg class="face-map" viewBox="0 0 1269 1240" aria-hidden="true">
+    <path pathLength="1" d="M335 475 L300 675 326 777 382 900 484 1030 635 1074 772 1020 876 886 935 768 962 670 914 477"/>
+    <path pathLength="1" d="M335 475 L450 490 535 485 M705 485 L780 490 914 477 M580 699 L637 570 674 699 M525 855 L637 874 737 855"/>
+    <path class="mesh-detail" pathLength="1" d="M335 475 L450 550 535 485 637 570 705 485 780 550 914 477 M450 550 L382 900 580 699 637 570 674 699 876 886 780 550 M580 699 L525 855 637 874 674 699 M525 855 L484 1030 637 874 772 1020 737 855 M637 874 L635 1074"/>
+    <path pathLength="1" d="M413 553 Q470 514 527 553 Q470 586 413 553 M710 553 Q766 514 823 553 Q766 586 710 553"/>
+    <circle class="eye-orbit" cx="470" cy="553" r="71"/><circle class="eye-orbit" cx="766" cy="553" r="71"/>
+    ${points.map(([x,y],i)=>`<circle cx="${x}" cy="${y}" r="5" style="--delay:${i*55}ms"/>`).join('')}
+   </svg>
+  </div>
+  <div class="profile-status" aria-hidden="true"><span data-profile-status data-hud>PROFILE READY</span><span data-hud>01 / 01</span></div>
+ </div>
+ <div class="about-stats">
+  <section class="profile-panel experience-panel" aria-labelledby="experience-label"><svg class="panel-geometry" viewBox="1014.38 221.172 277.425 116.346" aria-hidden="true"><g transform="matrix(1 0 0 -1 0 768)"><path class="holo-glass" d="M1278.979 538.62H1271.322C1270.923 538.62 1270.584 538.944 1270.584 539.358 1270.584 539.756 1270.923 540.095 1271.322 540.095H1278.979C1279.393 540.095 1279.717 539.756 1279.717 539.358 1279.717 538.944 1279.393 538.62 1278.979 538.62M1263.664 538.62H1256.007C1255.608 538.62 1255.269 538.944 1255.269 539.358 1255.269 539.756 1255.608 540.095 1256.007 540.095H1263.664C1264.077 540.095 1264.402 539.756 1264.402 539.358 1264.402 538.944 1264.077 538.62 1263.664 538.62M1248.349 538.62H1240.691C1240.293 538.62 1239.953 538.944 1239.953 539.358 1239.953 539.756 1240.293 540.095 1240.691 540.095H1248.349C1248.762 540.095 1249.086 539.756 1249.086 539.358 1249.086 538.944 1248.762 538.62 1248.349 538.62M1233.033 538.62H1225.376C1224.977 538.62 1224.638 538.944 1224.638 539.358 1224.638 539.756 1224.977 540.095 1225.376 540.095H1233.033C1233.447 540.095 1233.771 539.756 1233.771 539.358 1233.771 538.944 1233.447 538.62 1233.033 538.62M1217.718 538.62H1210.06C1209.662 538.62 1209.322 538.944 1209.322 539.358 1209.322 539.756 1209.662 540.095 1210.06 540.095H1217.718C1218.131 540.095 1218.456 539.756 1218.456 539.358 1218.456 538.944 1218.131 538.62 1217.718 538.62M1202.403 538.62H1194.745C1194.347 538.62 1194.007 538.944 1194.007 539.358 1194.007 539.756 1194.347 540.095 1194.745 540.095H1202.403C1202.816 540.095 1203.14 539.756 1203.14 539.358 1203.14 538.944 1202.816 538.62 1202.403 538.62M1187.087 538.62H1179.429C1179.031 538.62 1178.692 538.944 1178.692 539.358 1178.692 539.756 1179.031 540.095 1179.429 540.095H1187.087C1187.5 540.095 1187.825 539.756 1187.825 539.358 1187.825 538.944 1187.5 538.62 1187.087 538.62M1171.772 538.62H1164.114C1163.716 538.62 1163.376 538.944 1163.376 539.358 1163.376 539.756 1163.716 540.095 1164.114 540.095H1171.772C1172.185 540.095 1172.51 539.756 1172.51 539.358 1172.51 538.944 1172.185 538.62 1171.772 538.62M1156.456 538.62H1148.799C1148.4 538.62 1148.061 538.944 1148.061 539.358 1148.061 539.756 1148.4 540.095 1148.799 540.095H1156.456C1156.87 540.095 1157.194 539.756 1157.194 539.358 1157.194 538.944 1156.87 538.62 1156.456 538.62M1141.141 538.62H1137.452C1137.054 538.62 1136.714 538.944 1136.714 539.358 1136.714 539.756 1137.054 540.095 1137.452 540.095H1141.141C1141.554 540.095 1141.879 539.756 1141.879 539.358 1141.879 538.944 1141.554 538.62 1141.141 538.62M1286.637 540.095H1290.326V546.823H1051.949C1051.949 546.823 1015.46 509.907 1014.383 508.83V431.958H1176.316L1194.892 450.534H1290.326V538.62H1286.637C1286.239 538.62 1285.899 538.944 1285.899 539.358 1285.899 539.756 1286.239 540.095 1286.637 540.095" fill="currentColor" fill-opacity=".65"/><path d="M1047.49 546.828H1014.38V512.939Z" fill="currentColor"/><path d="M1180.715 430.482H1291.805V447.396H1197.448Z" fill="currentColor"/></g></svg>
+   <div class="experience-clock" role="timer" aria-live="off" aria-label="Creative experience since June 28, 2017 at 3 p.m. Eastern">${[['Years',0],['Months',1],['Days',2],['Hours',3],['Seconds',5]].map(([label,i])=>`<div class="experience-unit"><strong data-time-unit="${i}">00</strong><span data-hud>${label}</span></div>`).join('')}</div>
+   <h3 id="experience-label"><span data-hud>Experience</span></h3><time class="experience-since" datetime="2017-06-28T15:00:00-04:00">SINCE 28 JUN 2017 · 15:00 EDT</time>
+  </section>
+  <section class="profile-panel skills-panel" aria-labelledby="skills-label"><h3 id="skills-label"><svg class="skills-tab-geometry" viewBox="997.237 394.139 86.568 29.945" aria-hidden="true"><path transform="matrix(1 0 0 -1 0 768)" fill="currentColor" d="M1004.681 373.861 997.237 368.012V343.916H1063.551L1083.805 359.566V373.861Z"/></svg><span data-hud>Skills</span></h3>
+   <ul class="skills-list">${profileSkills.map(([label,value],i)=>`<li><span class="skill-label" data-hud>${label}</span><div class="skill-track" aria-hidden="true"><span class="skill-fill" style="--level:${value}%;--delay:${i*110}ms"></span></div></li>`).join('')}</ul>
+  </section>
+ </div>
+ <section class="profile-panel colour-panel" aria-label="Portrait colour palette"><svg class="colour-swatch" viewBox="199.7 530.1 165 61.4" aria-hidden="true"><path d="M359.390 530.799 L359.390 557.053 L322.190 585.799 L200.390 585.799 L200.390 541.542 L214.063 530.799 L359.390 530.799" fill="#f0ac8f" stroke="#fff" stroke-width="1"/><path d="M316.890 589.799 L323.890 589.799 L363.523 558.874 L363.390 531.799" fill="none" stroke="var(--accent)"/><path d="M259.384 590.299 L259.884 590.799 L259.298 590.799 L258.798 590.299 L259.384 590.299 M262.384 590.299 L262.884 590.799 L262.298 590.799 L261.798 590.299 L262.384 590.299 M265.384 590.299 L265.884 590.799 L265.298 590.799 L264.798 590.299 L265.384 590.299 M318.309 588.799 L315.720 590.799 L268.600 590.799 L266.561 588.799 L318.309 588.799" fill="var(--accent)"/></svg><div class="colour-data"><h3><span data-hud>Primary</span></h3><p><span data-hud>#F0AC8F</span><span data-hud>rgb [240, 172, 143]</span></p></div></section>
+ </div></section>`;
+}
+// Calendar units in Eastern time, independent of the visitor's computer timezone.
+function experienceParts(now=new Date()){
+ const parts=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:'America/Toronto',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(now).map(p=>[p.type,p.value]));
+ const current=Date.UTC(+parts.year,+parts.month-1,+parts.day,+parts.hour,+parts.minute,+parts.second);
+ const start=Date.UTC(2017,5,28,15);
+ if(current<start)return [0,0,0,0,0,0];
+ let years=+parts.year-2017;
+ if(Date.UTC(2017+years,5,28,15)>current)years--;
+ let months=0;
+ while(months<11&&Date.UTC(2017+years,5+months+1,28,15)<=current)months++;
+ let remaining=Math.floor((current-Date.UTC(2017+years,5+months,28,15))/1000);
+ const days=Math.floor(remaining/86400);remaining%=86400;
+ const hours=Math.floor(remaining/3600);remaining%=3600;
+ return [years,months,days,hours,Math.floor(remaining/60),remaining%60];
+}
+function setProfileNav(isAbout){
+ document.querySelectorAll('nav a').forEach(link=>{
+  const active=link.getAttribute('href')===(isAbout?'#about':'#work');
+  link.classList.toggle('active',active);
+  if(active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');
+ });
+}
+function scrollToAbout(focus=false){
+ const section=document.getElementById('about');if(!section)return;
+ section.scrollIntoView({behavior:motionOff.matches?'instant':'smooth',block:'start'});
+ if(focus)section.focus({preventScroll:true});
+}
+function setupAbout(){
+ aboutCleanup?.();aboutCleanup=null;
+ const section=document.getElementById('about');setProfileNav(false);if(!section)return;
+ const controller=new AbortController(),timers=new Set(),frames=new Set(),motions=new Set();
+ let started=false,visible=false,clock=0,counterUnlocked=false;
+ const clockNodes=[...section.querySelectorAll('[data-time-unit]')];
+ const tick=()=>{if(!counterUnlocked)return;const values=experienceParts();clockNodes.forEach(el=>el.textContent=String(values[+el.dataset.timeUnit]).padStart(2,'0'));};
+ const later=(fn,delay)=>{const id=setTimeout(()=>{timers.delete(id);if(!controller.signal.aborted)fn();},delay);timers.add(id);};
+ const textNodes=[...section.querySelectorAll('.decipher-text,[data-hud]')];
+ const originals=new Map(textNodes.map(el=>[el,el.textContent]));
+ textNodes.forEach(el=>{if(!el.closest('[aria-hidden="true"]')&&!el.classList.contains('decipher-text'))el.setAttribute('aria-label',el.textContent);});
+ function decipher(el,text=originals.get(el),duration=850){
+  if(!el)return;
+  el.classList.add('is-decoding');el.classList.remove('is-decoded');
+  const start=performance.now(),glyphs=el.matches('[data-time-unit]')?'0123456789':'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/<>_';let last=0;
+  function draw(now){
+   if(controller.signal.aborted)return;
+   const progress=Math.min(1,(now-start)/duration);
+   if(now-last>45||progress===1){el.textContent=Array.from(text).map((c,i)=>/\s/.test(c)||i/text.length<progress?c:glyphs[Math.floor(Math.random()*glyphs.length)]).join('');last=now;}
+   if(progress<1){const id=requestAnimationFrame(time=>{frames.delete(id);draw(time);});frames.add(id);}
+   else{el.textContent=text;el.classList.remove('is-decoding');el.classList.add('is-decoded');}
+  }
+  draw(start);
+ }
+ const decodeGroup=(root,duration=850)=>root.querySelectorAll('[data-hud]').forEach((el,i)=>later(()=>decipher(el,originals.get(el),duration),i*45));
+ const connector=section.querySelector('.profile-connectors');
+ function layoutConnectors(){
+  const root=section.getBoundingClientRect(),photo=section.querySelector('.profile-photo').getBoundingClientRect();
+  connector.setAttribute('viewBox',`0 0 ${root.width} ${root.height}`);
+  const local=r=>({x:r.left-root.left,y:r.top-root.top,w:r.width,h:r.height});
+  const p=local(photo),exp=local(section.querySelector('.experience-panel').getBoundingClientRect()),skill=local(section.querySelector('.skills-panel').getBoundingClientRect()),colour=local(section.querySelector('.colour-data').getBoundingClientRect());
+  const paths={
+   experience:[[p.x+p.w*.77,p.y+p.h*.42],[p.x+p.w+14,p.y+p.h*.42],[exp.x-15,exp.y+exp.h+9],[exp.x+exp.w*.55,exp.y+exp.h+9]],
+   skills:[[p.x+p.w*.73,p.y+p.h*.69],[p.x+p.w+8,p.y+p.h*.69],[skill.x+8,skill.y+12],[skill.x+8,skill.y+skill.h]],
+   colour:[[p.x+p.w*.16,p.y+p.h*.86],[p.x-15,colour.y+13],[colour.x+colour.w+14,colour.y+13]]
+  };
+  if(innerWidth<=1050){
+   paths.experience=[[p.x+p.w*.74,p.y+p.h*.68],[p.x+p.w*.92,p.y+p.h],[exp.x+exp.w*.6,exp.y-12],[exp.x+exp.w*.6,exp.y]];
+   paths.skills=[[p.x+p.w*.85,p.y+p.h*.55],[root.width-3,p.y+p.h*.55],[root.width-3,skill.y+10],[skill.x+8,skill.y+10],[skill.x+8,skill.y+skill.h]];
+   paths.colour=[[p.x+p.w*.16,p.y+p.h*.86],[2,p.y+p.h*.86],[2,colour.y+13],[colour.x-12,colour.y+13]];
+  }
+  for(const [name,points] of Object.entries(paths)){
+   const group=connector.querySelector('[data-link="'+name+'"]');
+   group.querySelector('path').setAttribute('d',points.map(([x,y],i)=>(i?'L':'M')+x.toFixed(2)+' '+y.toFixed(2)).join(' '));
+   const ends=[points[0],points.at(-1)];group.querySelectorAll('circle').forEach((el,i)=>{el.setAttribute('cx',ends[i][0]);el.setAttribute('cy',ends[i][1]);});
+  }
+ }
+ function deploy(name){
+  const panel=section.querySelector(name==='colour'?'.colour-panel':'.'+name+'-panel');
+  section.classList.add(name+'-visible');
+  const rect=panel.getBoundingClientRect(),photo=section.querySelector('.profile-photo').getBoundingClientRect();
+  const dx=photo.left+photo.width*(name==='colour'?.25:.78)-(rect.left+rect.width/2),dy=photo.top+photo.height*.54-(rect.top+rect.height/2);
+  const anim=panel.animate([
+   {opacity:0,transform:`translate(${dx}px,${dy}px) scale(.015,.025)`},
+   {opacity:.75,transform:`translate(${dx*.13}px,${dy*.13}px) scale(.93,.055)`,offset:.48},
+   {opacity:1,transform:'translate(0,0) scale(1,1)'}
+  ],{duration:850,easing:'cubic-bezier(.2,.7,.2,1)',fill:'both'});
+  motions.add(anim);anim.finished.then(()=>{anim.cancel();motions.delete(anim);}).catch(()=>{});
+  later(()=>{
+   decodeGroup(panel,850);
+   if(name==='experience'){
+    const values=experienceParts();clockNodes.forEach(el=>decipher(el,String(values[+el.dataset.timeUnit]).padStart(2,'0'),1000));
+    later(()=>{counterUnlocked=true;tick();},1050);
+   }
+   if(name==='skills')later(()=>section.classList.add('bars-filled'),300);
+  },700);
+ }
+ function finish(){
+  timers.forEach(clearTimeout);timers.clear();frames.forEach(cancelAnimationFrame);frames.clear();motions.forEach(a=>a.cancel());motions.clear();
+  section.classList.add('profile-open','text-visible','scan-active','experience-visible','skills-visible','colour-visible','bars-filled','link-experience','link-skills','link-colour');
+  textNodes.forEach(el=>{el.textContent=originals.get(el);el.classList.remove('is-decoding');el.classList.add('is-decoded');});
+  section.querySelector('[data-profile-status]').textContent='PROFILE COMPLETE';clockNodes.forEach(el=>el.classList.add('is-decoded'));counterUnlocked=true;tick();
+ }
+ function start(){
+  if(started)return;started=true;
+  if(motionOff.matches){finish();return;}
+  section.classList.add('profile-open');decodeGroup(section.querySelector('.profile-id'),700);decodeGroup(section.querySelector('.profile-status'),750);
+  later(()=>{section.classList.add('text-visible');section.querySelectorAll('.decipher-text').forEach((el,i)=>decipher(el,profileBiography[i],1300+i*200));},650);
+  later(()=>{section.classList.add('scan-active');decipher(section.querySelector('[data-profile-status]'),'MAPPING FEATURES',850);},2200);
+  later(()=>section.classList.add('link-experience'),2900);
+  later(()=>deploy('experience'),3500);
+  later(()=>section.classList.add('link-skills'),3900);
+  later(()=>deploy('skills'),4450);
+  later(()=>section.classList.add('link-colour'),4800);
+  later(()=>deploy('colour'),5350);
+  later(()=>decipher(section.querySelector('[data-profile-status]'),'PROFILE COMPLETE',800),7000);
+ }
+ section.classList.add('about-pending');layoutConnectors();
+ const resize=new ResizeObserver(layoutConnectors);resize.observe(section);
+ const observer=new IntersectionObserver(entries=>{
+  visible=entries[0].isIntersecting;section.classList.toggle('in-view',visible);setProfileNav(visible);
+  clearInterval(clock);clock=0;
+  if(visible){start();tick();if(!document.hidden)clock=setInterval(tick,1000);}
+ },{threshold:.12});observer.observe(section);
+ document.addEventListener('visibilitychange',()=>{clearInterval(clock);clock=0;if(visible&&!document.hidden){tick();clock=setInterval(tick,1000);}section.classList.toggle('in-view',visible&&!document.hidden);},{signal:controller.signal});
+ motionOff.addEventListener('change',()=>{if(motionOff.matches&&started)finish();},{signal:controller.signal});
+ aboutCleanup=()=>{controller.abort();observer.disconnect();resize.disconnect();clearInterval(clock);timers.forEach(clearTimeout);frames.forEach(cancelAnimationFrame);motions.forEach(a=>a.cancel());};
+ if(location.hash==='#about'&&!routeBusy)requestAnimationFrame(()=>scrollToAbout());
+}
+
+// Anchor navigation keeps About within the work page, including repeat clicks.
+document.addEventListener('click',event=>{
+ const link=event.target.closest('a[href="#about"],a[href="#work"]');
+ if(!link||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+ if(link.getAttribute('href')==='#work'&&content.classList.contains('project-page'))return;
+ event.preventDefault();
+ const hash=link.getAttribute('href');
+ if(location.hash!==hash)history.pushState(null,'',hash);
+ transitionToRoute();
+},true);
+
+function render(){const slug=location.hash.slice(1);content.classList.toggle('project-page',slug==='lego'||slug==='omega'||slug==='thom-sweeney'||!!portfolioPages[slug]);if(portfolioPages[slug]){content.innerHTML=portfolioPage(slug);document.title=portfolioPages[slug].title+' — Jay Bowie';}else if(slug==='thom-sweeney'){content.innerHTML=thomPage();document.title='Thom Sweeney — You’ll Need a Suit — Jay Bowie';}else if(slug==='omega'){content.innerHTML=omegaPage();document.title='Omega — Made to wear — Jay Bowie';}else if(slug==='lego'){content.innerHTML=`<article class="lego-project"><section class="project-intro"><h1><span class="project-brand">LEGO</span> <span class="project-campaign">What Kids See</span></h1><div><p>Creativity comes in many forms, but one that always seems to capture the imagination is rectangular.</p><p>As we get older, we tend to see things for what they are. Practicality takes over, and the instinct to imagine what something could become gets quieter. A pile of LEGO bricks becomes something to tidy up—or a painful reminder to watch where we step. To a child, that same pile is already a racecar, a dragon or a haunted house. They can see the adventure before they’ve built it.</p><p>“What Kids See” brings that difference in perspective to life. Each execution pairs a loose pile of bricks with the name of something extraordinary, asking adults to make a connection that comes naturally to children. The colours offer a hint; imagination fills in the rest.</p><p class="project-credits">Concept | Copywriting | Design</p></div></section><div class="lego-hero">${legoImage('01',true)}</div><section class="lego-gallery" aria-label="LEGO campaign installations"><div class="lego-gallery-row">${['02','03'].map(key=>`<figure>${legoImage(key)}</figure>`).join('')}</div><div class="lego-gallery-row">${['04','05'].map(key=>`<figure>${legoImage(key)}</figure>`).join('')}</div></section><section class="lego-artwork-strip" aria-label="Five campaign artworks">${['06','07','08','09','10'].map(key=>`<figure><button type="button" class="artwork-open" data-artwork="${key}" aria-controls="artwork-viewer" aria-expanded="false" aria-label="Enlarge ${legoAssets[key].alt}">${legoImage(key)}</button></figure>`).join('')}</section><footer class="project-footer"><a href="#work">All projects</a><a href="#omega">Next project →</a></footer></article>`;document.title='LEGO — What Kids See — Jay Bowie';}else{content.innerHTML='<section aria-label="Selected projects" class="grid">'+projects.map((p,i)=>`<div class="emerge" style="--i:${i}"><a class="card soft-card" href="#${projectRoutes[i]}"><div class="soft-card__content"><div role="img" aria-label="${p[0]} project preview" class="thumb" style="${thumb(i)}"></div><div class="caption"><strong>${p[0]}</strong><span>${p[1]}</span><b class="arrow" aria-hidden="true">›</b></div></div></a></div>`).join('')+'</section>';document.title='Jay Bowie — Work';if(window.seen)document.querySelectorAll('.emerge').forEach(e=>{e.style.animationDelay='0s';e.style.animationDuration='.4s'});window.seen=true;}if(!content.classList.contains('project-page'))content.insertAdjacentHTML('beforeend',aboutMarkup());decorateControls();setupFilm();setupAbout();window.scrollTo(0,0)}
+// One finite intro: header, quiet emergence, then name collapse.
+async function playIntroduction(){
+ if(motionOff.matches){document.body.classList.remove('introducing');await rollName(true);introDone=true;return;}
+ const section=document.querySelector('.grid'),menu=[...document.querySelector('nav').children];
+ const options={easing:'cubic-bezier(.25,.1,.25,1)',fill:'forwards'};
+ const motions=[];
+ const dissolve=(element,duration)=>{
+  const animation=element.animate([{opacity:0},{opacity:1}],{...options,duration});
+  motions.push(animation);return animation;
+ };
+ // The surface quietly gains definition as a single composition.
+ const revealSection=()=>{
+  if(!section)return Promise.resolve();
+  const animation=section.animate([
+   {opacity:0,filter:'blur(3px)',transform:'translateY(4px)',offset:0},
+   {opacity:.18,filter:'blur(1.8px)',transform:'translateY(2.8px)',offset:.28},
+   {opacity:.78,filter:'blur(.35px)',transform:'translateY(.6px)',offset:.72},
+   {opacity:1,filter:'blur(0px)',transform:'translateY(0px)',offset:1}
+  ],{duration:motionOff.matches?0:1900,easing:'cubic-bezier(.3,0,.2,1)',fill:'forwards'});
+  motions.push(animation);return animation.finished;
+ };
+ const finishReduced=()=>{if(motionOff.matches)motions.forEach(animation=>{if(animation.playState!=='finished')animation.finish();});};
+ motionOff.addEventListener('change',finishReduced);
+ try{
+  await dissolve(wordmark,520).finished;
+  const reveals=menu.map(element=>dissolve(element,motionOff.matches?0:1200));
+  await Promise.all([revealSection(),...reveals.map(animation=>animation.finished)]);
+ }finally{
+  document.body.classList.remove('introducing');
+  motions.forEach(animation=>animation.cancel());
+  motionOff.removeEventListener('change',finishReduced);
+ }
+ await rollName(true);introDone=true;
+ if(wordmark.matches(':hover')||document.activeElement===wordmark)rollName(false);
+}
+
+// Depth transition: absorb the current page into the surface, then reveal the next.
+let routeBusy = false;
+let renderedRoute = location.hash;
+let workScroll = 0;
+let returnProject = '';
+let pendingPressedCard = null;
+const routeMotions = new Set();
+const pageSink = [
+  {offset:0,opacity:1,transform:'scale(1)',filter:'blur(0px) saturate(1) contrast(1)'},
+  {offset:.34,opacity:.82,transform:'scale(.995)',filter:'blur(1.2px) saturate(.9) contrast(.92)'},
+  {offset:.72,opacity:.3,transform:'scale(.99)',filter:'blur(7px) saturate(.55) contrast(.65)'},
+  {offset:1,opacity:0,transform:'scale(.984)',filter:'blur(11px) saturate(.4) contrast(.5)'}
+];
+const pageEmerge = [...pageSink].reverse().map(frame=>({...frame,offset:1-frame.offset}));
+function surfaceMotion(element,frames,duration,easing) {
+  const animation=element.animate(frames,{duration:motionOff.matches?0:duration,easing,fill:'both'});
+  routeMotions.add(animation);
+  return animation.finished.catch(()=>{});
+}
+function clearRouteMotions(){routeMotions.forEach(animation=>animation.cancel());routeMotions.clear();}
+function setPageDepthOrigin(){
+  const bounds=content.getBoundingClientRect();
+  content.style.transformOrigin=`50% ${Math.max(0,innerHeight*.48-bounds.top)}px`;
+}
+motionOff.addEventListener('change',()=>{if(motionOff.matches)routeMotions.forEach(animation=>animation.finish());});
+document.addEventListener('click',event=>{
+  const card=event.target.closest('a.card');
+  if(card&&event.button===0&&!event.ctrlKey&&!event.metaKey&&!event.shiftKey&&!event.altKey){
+    returnProject=card.getAttribute('href');
+    card.classList.add('is-pressing');
+    pendingPressedCard=card;
+  }
+},true);
+async function transitionToRoute(){
+  if(!routeBusy&&!content.classList.contains('project-page')&&['#about','#work'].includes(location.hash)){
+    renderedRoute=location.hash;
+    if(location.hash==='#about')scrollToAbout(true);
+    else {setProfileNav(false);window.scrollTo({top:0,behavior:motionOff.matches?'instant':'smooth'});}
+    return;
+  }
+  if(routeBusy||location.hash===renderedRoute)return;
+  routeBusy=true;
+  if(!content.classList.contains('project-page'))workScroll=window.scrollY;
+  else returnProject=renderedRoute;
+  try{
+    document.body.classList.add('is-transitioning');content.inert=true;
+    // Let the raised surface compress before the page itself sinks away.
+    const pressedCard=pendingPressedCard;pendingPressedCard=null;
+    if(pressedCard?.isConnected&&!motionOff.matches)
+      await new Promise(resolve=>setTimeout(resolve,300));
+    setPageDepthOrigin();
+    if(!motionOff.matches)await surfaceMotion(content,pageSink,580,'cubic-bezier(.4,0,.55,1)');
+    render();renderedRoute=location.hash;
+    const isWork=!content.classList.contains('project-page');
+    if(isWork&&location.hash!=='#about')window.scrollTo(0,workScroll);
+    clearRouteMotions();setPageDepthOrigin();
+    if(!motionOff.matches)await surfaceMotion(content,pageEmerge,820,'cubic-bezier(.2,.55,.25,1)');
+    content.inert=false;
+    const focusTarget=isWork?[...content.querySelectorAll('.card')].find(card=>card.getAttribute('href')===returnProject):content.querySelector('h1');
+    if(location.hash==='#about')scrollToAbout(true);
+    else if(focusTarget){if(focusTarget.tagName==='H1')focusTarget.tabIndex=-1;focusTarget.focus({preventScroll:true});}
+  }finally{
+    clearRouteMotions();content.style.removeProperty('transform-origin');content.inert=false;
+    document.body.classList.remove('is-transitioning');routeBusy=false;
+  }
+  if(location.hash!==renderedRoute)transitionToRoute();
+}
+
+window.addEventListener('hashchange', transitionToRoute);render();playIntroduction();const dialog=document.querySelector('dialog');document.addEventListener('click',e=>{const a=e.target.closest('[data-info],[data-project]');if(!a)return;e.preventDefault();const key=a.dataset.info;dialog.querySelector('h2').textContent=a.dataset.project?projects[+a.dataset.project][0]:key==='next'?'OMEGA':key==='resume'?'Résumé':'About';dialog.querySelector('p').textContent='This section has not been added to the portfolio yet.';dialog.showModal()});dialog.addEventListener('close',()=>document.querySelectorAll('.card.is-pressing').forEach(card=>card.classList.remove('is-pressing')));dialog.querySelector('button').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});document.querySelector('.replay').onclick=()=>{location.hash='work';location.reload()};
+
+function decorateControls(root=document){
+ root.querySelectorAll('a:not(.skip),button').forEach(el=>{
+  if(el.closest('header')){el.classList.remove('tactile-control','is-pressing');return;}
+  el.classList.add('tactile-control');
+ });
+}
+decorateControls();
+const releaseTimers=new WeakMap();let pressedControl=null;
+function pressControl(el){if(!el)return;clearTimeout(releaseTimers.get(el));el.classList.add('is-pressing');el.dispatchEvent(new CustomEvent('surface-press',{detail:true}));pressedControl=el;}
+function releaseControl(){const el=pressedControl;if(!el)return;pressedControl=null;releaseTimers.set(el,setTimeout(()=>{el.classList.remove('is-pressing');el.dispatchEvent(new CustomEvent('surface-press',{detail:false}));},el.classList.contains('soft-card')?760:300));}
+document.addEventListener('pointerdown',e=>{if(e.button===0)pressControl(e.target.closest('.tactile-control:not(.soft-card)'));});
+document.addEventListener('pointerup',releaseControl);document.addEventListener('pointercancel',releaseControl);window.addEventListener('blur',releaseControl);
+document.addEventListener('keydown',e=>{if(!e.repeat&&(e.key==='Enter'||e.key===' '))pressControl(e.target.closest('.tactile-control:not(.soft-card)'));});
+document.addEventListener('keyup',e=>{if(e.key==='Enter'||e.key===' ')releaseControl();});
+const viewer=document.createElement('section');viewer.id='artwork-viewer';viewer.hidden=true;viewer.tabIndex=-1;viewer.setAttribute('role','region');viewer.setAttribute('aria-label','Expanded LEGO campaign artwork');
+viewer.innerHTML='<div class="viewer-bar"><span class="viewer-count" aria-live="polite"></span><div class="viewer-controls"><button type="button" class="viewer-round" data-viewer="previous" aria-label="Previous artwork">‹</button><button type="button" class="viewer-round" data-viewer="next" aria-label="Next artwork">›</button><button type="button" class="viewer-round" data-viewer="close" aria-label="Collapse artwork">×</button></div></div><img alt="">';
+decorateControls(viewer);
+let artworkKeys=['06','07','08','09','10'],artworkAssets=legoAssets;let artworkIndex=0,viewerOpener=null,viewerMotion=null,swapRevision=0,swapAnimations=[];
+function markArtwork(){
+ const strip=document.querySelector('.lego-artwork-strip');if(!strip)return;
+ const open=!viewer.hidden&&viewer.isConnected;strip.classList.toggle('is-viewing',open);const count=strip.querySelectorAll('[data-artwork]').length;strip.style.gridTemplateColumns='repeat('+(count-(open?1:0))+',minmax(0,1fr))';
+ strip.querySelectorAll('[data-artwork]').forEach(el=>{
+  const selected=open&&el.dataset.artwork===artworkKeys[artworkIndex],figure=el.closest('figure'),wasHidden=figure.hidden;
+  figure.hidden=selected;el.setAttribute('aria-expanded',String(selected));
+  if(wasHidden&&!selected&&!motionOff.matches)el.animate(artworkEmerge,{duration:900,easing:'cubic-bezier(.22,.45,.25,1)'});
+ });
+}
+function cancelArtworkSwap(){swapRevision++;swapAnimations.forEach(a=>a.cancel());swapAnimations=[];}
+// The outgoing enlarged artwork returns to the exact slot that was clicked.
+// A milky surface absorbs colour and detail before the artwork disappears.
+// Minimal planar travel keeps the motion in depth, rather than sliding away.
+const artworkSink=[
+ {offset:0,opacity:1,filter:'blur(0px) saturate(1) contrast(1) brightness(1)',transform:'scale(1)'},
+ {offset:.28,opacity:.94,filter:'blur(1px) saturate(.85) contrast(.86) brightness(1.06)',transform:'scale(.997)'},
+ {offset:.64,opacity:.52,filter:'blur(7px) saturate(.45) contrast(.48) brightness(1.28)',transform:'scale(.989)'},
+ {offset:1,opacity:0,filter:'blur(20px) saturate(.12) contrast(.15) brightness(1.65)',transform:'scale(.98)'}
+];
+const artworkEmerge=[...artworkSink].reverse().map(frame=>({...frame,offset:1-frame.offset}));
+async function switchArtwork(index){
+ cancelArtworkSwap();const revision=swapRevision;
+ const next=(index+artworkKeys.length)%artworkKeys.length;
+ if(next===artworkIndex)return;
+ const img=viewer.querySelector('img'),strip=document.querySelector('.lego-artwork-strip');
+ const thumb=strip.querySelector('[data-artwork="'+artworkKeys[next]+'"]');
+ const previous=strip.querySelector('[data-artwork="'+artworkKeys[artworkIndex]+'"]');
+ function tradePlaces(){
+  if(thumb&&previous)thumb.closest('figure').before(previous.closest('figure'));
+  showArtwork(next);
+  // Focus the replacement in the same slot, never a now-hidden thumbnail.
+  if(thumb&&document.activeElement===thumb)previous.focus({preventScroll:true});
+  viewerOpener=previous;
+ }
+ if(motionOff.matches){tradePlaces();return;}
+ swapAnimations=[img,...(thumb?[thumb]:[])].map(el=>el.animate(artworkSink,{duration:720,easing:'cubic-bezier(.4,0,.45,1)',fill:'forwards'}));
+ try{
+  await Promise.all(swapAnimations.map(a=>a.finished));if(revision!==swapRevision)return;
+  tradePlaces();
+  swapAnimations.forEach(a=>a.cancel());
+  const emerge=img.animate(artworkEmerge,{duration:900,easing:'cubic-bezier(.22,.45,.25,1)',fill:'both'});
+  swapAnimations=[emerge];await emerge.finished;
+  if(revision===swapRevision){emerge.cancel();swapAnimations=[];}
+ }catch{}
+}
+function showArtwork(index){artworkIndex=(index+artworkKeys.length)%artworkKeys.length;const asset=artworkAssets[artworkKeys[artworkIndex]],img=viewer.querySelector('img');img.src=asset.src;img.alt=asset.alt;img.width=asset.w;img.height=asset.h;viewer.querySelector('.viewer-count').textContent=(artworkIndex+1)+' / '+artworkKeys.length;markArtwork();}
+function expandArtwork(open){
+ if(!open)cancelArtworkSwap();
+ const from=viewer.hidden?0:viewer.getBoundingClientRect().height;
+ if(viewerMotion){viewerMotion.cancel();viewerMotion=null;}
+ viewer.hidden=false;viewer.style.height='';
+ const to=open?viewer.scrollHeight:0;
+ if(motionOff.matches){viewer.hidden=!open;markArtwork();if(!open)viewerOpener?.focus({preventScroll:true});return;}
+ const animation=viewer.animate([{height:from+'px',opacity:open&&from===0?0:1},{height:to+'px',opacity:open?1:0}],{duration:420,easing:'cubic-bezier(.25,.1,.25,1)',fill:'both'});
+ viewerMotion=animation;markArtwork();
+ animation.finished.then(()=>{if(viewerMotion!==animation)return;viewer.hidden=!open;animation.cancel();viewerMotion=null;markArtwork();if(!open)viewerOpener?.focus({preventScroll:true});}).catch(()=>{});
+}
+document.addEventListener('click',e=>{const opener=e.target.closest('[data-artwork]');if(!opener)return;const strip=opener.closest('.lego-artwork-strip');const page=portfolioPages[strip.closest('[data-project-key]')?.dataset.projectKey];const isOmega=!!strip.closest('.omega-project'),isThom=!!strip.closest('.thom-project');artworkKeys=page?page.artwork:isThom?['02','03','04']:isOmega?['04','05','06','07','08']:['06','07','08','09','10'];artworkAssets=page?page.assets:isThom?thomAssets:isOmega?omegaAssets:legoAssets;viewer.setAttribute('aria-label','Expanded '+(page?page.title:isThom?'Thom Sweeney':isOmega?'Omega':'LEGO')+' campaign artwork');const wasOpen=!viewer.hidden&&viewer.isConnected;viewerOpener=opener;strip.after(viewer);if(wasOpen){switchArtwork(artworkKeys.indexOf(opener.dataset.artwork));}else{showArtwork(artworkKeys.indexOf(opener.dataset.artwork));expandArtwork(true);}markArtwork();viewer.focus({preventScroll:true});});
+viewer.addEventListener('click',e=>{const action=e.target.closest('[data-viewer]')?.dataset.viewer;if(action==='close')expandArtwork(false);else if(action==='previous')switchArtwork(artworkIndex-1);else if(action==='next')switchArtwork(artworkIndex+1);});
+viewer.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();expandArtwork(false);}if(e.key==='ArrowLeft'){e.preventDefault();switchArtwork(artworkIndex-1);}if(e.key==='ArrowRight'){e.preventDefault();switchArtwork(artworkIndex+1);}});
+window.addEventListener('hashchange',()=>{cancelArtworkSwap();viewerMotion?.cancel();viewerMotion=null;viewer.hidden=true;viewer.remove();});
+
+</script></body></html>
