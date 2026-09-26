@@ -531,6 +531,48 @@ body.introducing .grid { pointer-events:none; }
  .skill-fill::after{animation:none!important;}
 }
 
+/* Reserved navigation space prevents HUD and project content crossing the menu. */
+@media(min-width:901px){
+ .about-section{width:calc(100vw - 310px);max-width:1400px;left:calc(50% - 35px);}
+}
+@media(max-width:900px){
+ nav{top:0;right:0;left:0;flex-direction:row;justify-content:flex-end;align-items:center;gap:24px;padding:20px 6%;background:rgba(232,232,230,.94);backdrop-filter:blur(12px);}
+ nav a,nav button{margin:0!important;}
+ .about-section{scroll-margin-top:80px;}
+}
+.profile-photo{inset:auto 7%;top:50%;transform:translateY(-50%);aspect-ratio:1269/1240;display:block;}
+.profile-photo img{width:100%;height:100%;object-fit:contain;}
+.face-map{width:100%;height:100%;}
+.surface-loader{position:fixed;inset:0;z-index:10000;background:var(--bg);pointer-events:auto;}
+.surface-loader canvas{display:block;width:100%;height:100%;}
+.in-view.experience-visible .holo-glass{animation:holo-breathe 7s ease-in-out infinite;}
+.in-view.colour-visible .colour-swatch{animation:colour-live 8s ease-in-out infinite;}
+.in-view.scan-active .face-map .eye-orbit{transform-box:fill-box;transform-origin:center;animation:orbit-live 18s linear infinite;}
+.in-view.scan-active .face-map .mesh-detail{animation:mesh-live 6s ease-in-out infinite;}
+.telemetry{display:flex;gap:3px;align-items:end;height:11px;position:absolute;right:12px;bottom:9px;pointer-events:none;}
+.telemetry i{display:block;width:2px;height:9px;background:currentColor;transform-origin:bottom;animation:telemetry-live 2.7s ease-in-out infinite;animation-delay:calc(var(--i)*-370ms);}
+.skills-panel .telemetry{right:14px;top:7px;color:var(--accent);}
+.colour-panel .telemetry{right:auto;left:0;bottom:-14px;color:var(--accent);}
+.about-section:not(.in-view) .telemetry i{animation-play-state:paused;}
+@keyframes telemetry-live{0%,100%{transform:scaleY(.3);opacity:.4;}45%{transform:scaleY(1);opacity:.8;}70%{transform:scaleY(.55);opacity:.6;}}
+@keyframes holo-breathe{0%,100%{fill-opacity:.65;}50%{fill-opacity:.56;}}
+@keyframes colour-live{0%,100%{filter:brightness(1);}50%{filter:brightness(1.045);}}
+@keyframes orbit-live{to{transform:rotate(360deg);}}
+@keyframes mesh-live{0%,100%{opacity:.24;}50%{opacity:.48;}}
+@media(prefers-reduced-motion:reduce){.telemetry i,.holo-glass,.colour-swatch,.face-map .eye-orbit,.face-map .mesh-detail{animation:none!important;}}
+
+
+/* Loading text: supplied one-pixel slice animation, scoped to the loader. */
+.surface-loading{--duration:2000ms;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:400 24px/1.2 Roboto,Arial,sans-serif;white-space:nowrap;user-select:none;color:var(--accent);}
+.surface-loading span{--x:0;--y:0;--move-y:0;--move-y-s:0;--delay:0ms;display:block;position:absolute;top:0;left:0;width:1px;text-indent:calc(var(--x) * -1);overflow:hidden;transform:translate(var(--x),var(--y));}
+.surface-loading.start div{opacity:0;}
+.surface-loading.start span{animation:loading-slice-move var(--duration) ease-in-out var(--delay);}
+@keyframes loading-slice-move{30%{transform:translate(var(--x),var(--move-y));}82%{transform:translate(var(--x),var(--move-y-s));}}
+
+.roll-tail{position:relative;}
+.name-source{white-space:pre;display:block;}
+.name-fragments{position:absolute;inset:0;pointer-events:none;clip-path:inset(-90px 0 -90px 0);}
+.name-strip{position:absolute;top:0;display:block;width:1px;white-space:pre;overflow:hidden;font:inherit;letter-spacing:inherit;}
 </style></head>
 <body class="introducing"><a class="skip" href="#content">Skip to work</a><header><a id="logo" class="brand lt_anime" aria-label="Jay Bowie — All projects" href="#work"><span class="roll-cell" aria-hidden="true" data-n="0"><span class="roll-track"><span class="roll-face">J</span></span></span><span class="roll-tail"><span class="roll-cell" aria-hidden="true" data-n="1"><span class="roll-track"><span class="roll-face">a</span></span></span><span class="roll-cell" aria-hidden="true" data-n="2"><span class="roll-track"><span class="roll-face">y</span></span></span><span class="roll-cell" aria-hidden="true" data-n="3"><span class="roll-track"><span class="roll-face"> </span></span></span><span class="roll-cell" aria-hidden="true" data-n="4"><span class="roll-track"><span class="roll-face">B</span></span></span><span class="roll-cell" aria-hidden="true" data-n="5"><span class="roll-track"><span class="roll-face">o</span></span></span><span class="roll-cell" aria-hidden="true" data-n="6"><span class="roll-track"><span class="roll-face">w</span></span></span><span class="roll-cell" aria-hidden="true" data-n="7"><span class="roll-track"><span class="roll-face">i</span></span></span><span class="roll-cell" aria-hidden="true" data-n="8"><span class="roll-track"><span class="roll-face">e</span></span></span></span></a><nav aria-label="Main navigation"><a class="active" href="#work">work</a><a href="#about">about</a><a id="resume-link" target="_blank" rel="noopener" aria-label="Resume (PDF, opens in a new tab)">resume</a></nav></header><main id="content" tabindex="-1"></main><button class="replay">Replay introduction</button><dialog><h2></h2><p></p><button autofocus>Close</button></dialog>
 <script>
@@ -542,26 +584,20 @@ let compact=false,busy=false,introDone=false,wanted=true;
 const motionOff=matchMedia('(prefers-reduced-motion: reduce)');
 async function rollName(hide){
  wanted=hide;if(busy||compact===hide)return;busy=true;
- const movingCells=cells.slice(1);
- // Visibility preserves the full wordmark's hover area while its tail is hidden.
- if(motionOff.matches){tail.style.visibility=hide?'hidden':'visible';compact=hide;busy=false;return;}
- const shown={transform:'translateY(0)',opacity:1};
- // Give only y a lower mask and enough travel to clear that edge completely.
- const hiddenFor=cell=>({transform:cell.dataset.n==='2'?'translateY(1.35em)':'translateY(1.1em)',opacity:1});
- movingCells.forEach(cell=>{const track=cell.querySelector('.roll-track');Object.assign(track.style,hide?shown:hiddenFor(cell));track.style.clipPath='none';});
- tail.style.visibility='visible';
- const starts=[0,30,30,60,90,120,150,180];
- const motions=movingCells.map((cell,index)=>cell.querySelector('.roll-track').animate(
-  hide?[shown,hiddenFor(cell)]:[hiddenFor(cell),shown],
-  {duration:300,delay:hide?starts[starts.length-1]-starts[index]:starts[index],easing:'ease',fill:'both'}
- ));
- await Promise.all(motions.map(m=>m.finished));
- tail.style.visibility=hide?'hidden':'visible';
- movingCells.forEach((cell,index)=>{const track=cell.querySelector('.roll-track');Object.assign(track.style,hide?hiddenFor(cell):shown);track.style.clipPath='none';motions[index].cancel()});
- compact=hide;busy=false;
+ if(!tail.querySelector('.name-source'))tail.innerHTML='<span class="name-source">ay Bowie</span>';
+ const source=tail.querySelector('.name-source');
+ if(motionOff.matches){source.style.opacity=hide?'0':'1';compact=hide;busy=false;return;}
+ const width=Math.ceil(source.getBoundingClientRect().width),fragments=document.createElement('span');fragments.className='name-fragments';fragments.setAttribute('aria-hidden','true');
+ const motions=[];tail.style.visibility='visible';source.style.opacity='0';tail.append(fragments);
+ for(let i=0;i<width;i++){
+  const strip=document.createElement('span');strip.className='name-strip';strip.textContent='ay Bowie';strip.style.left=i+'px';strip.style.textIndent=-i+'px';fragments.append(strip);
+  const displacement=(20+Math.random()*50)*(i%2?1:-1),settle=displacement-Math.sign(displacement)*(10+Math.random()*10);
+  const shown={transform:'translateY(0)',opacity:1},away={transform:`translateY(${displacement}px)`,opacity:0},between={transform:`translateY(${settle}px)`,opacity:.8,offset:hide?.35:.65};
+  motions.push(strip.animate(hide?[shown,between,away]:[away,between,shown],{duration:650,delay:(hide?width-1-i:i)*1.5,easing:'ease-in-out',fill:'both'}));
+ }
+ await Promise.all(motions.map(m=>m.finished));source.style.opacity=hide?'0':'1';fragments.remove();motions.forEach(m=>m.cancel());compact=hide;busy=false;
  if(wanted!==compact)rollName(wanted);
 }
-
 
 wordmark.addEventListener('pointerenter',()=>{if(introDone)rollName(false)});
 wordmark.addEventListener('pointerleave',()=>{if(introDone)rollName(true)});
@@ -677,12 +713,11 @@ function aboutMarkup(){
   <div class="profile-id" aria-hidden="true"><b data-hud>PROFILE / 001</b><span data-hud>JAY BOWIE</span></div>
   <div class="profile-photo"><img src="${profilePortrait}" width="1269" height="1240" alt="Portrait of Jay Bowie" decoding="async" loading="lazy">
    <svg class="face-map" viewBox="0 0 1269 1240" aria-hidden="true">
-    <path pathLength="1" d="M335 475 L300 675 326 777 382 900 484 1030 635 1074 772 1020 876 886 935 768 962 670 914 477"/>
-    <path pathLength="1" d="M335 475 L450 490 535 485 M705 485 L780 490 914 477 M580 699 L637 570 674 699 M525 855 L637 874 737 855"/>
-    <path class="mesh-detail" pathLength="1" d="M335 475 L450 550 535 485 637 570 705 485 780 550 914 477 M450 550 L382 900 580 699 637 570 674 699 876 886 780 550 M580 699 L525 855 637 874 674 699 M525 855 L484 1030 637 874 772 1020 737 855 M637 874 L635 1074"/>
-    <path pathLength="1" d="M413 553 Q470 514 527 553 Q470 586 413 553 M710 553 Q766 514 823 553 Q766 586 710 553"/>
-    <circle class="eye-orbit" cx="470" cy="553" r="71"/><circle class="eye-orbit" cx="766" cy="553" r="71"/>
-    ${points.map(([x,y],i)=>`<circle cx="${x}" cy="${y}" r="5" style="--delay:${i*55}ms"/>`).join('')}
+    <path pathLength="1" d="M350 510 L307 592 329 745 383 887 497 1018 636 1050 754 1014 860 883 909 729 937 580 900 510 M350 510 L440 505 520 514 558 543 M699 542 L770 503 853 510 M568 740 L625 620 687 740 630 766Z M520 854 Q627 832 737 854 Q627 902 520 854"/>
+    <path pathLength="1" d="M443 562 Q501 514 562 559 Q504 590 443 562 M708 559 Q765 516 824 562 Q765 590 708 559"/>
+    <path class="mesh-detail" pathLength="1" d="M350 510 L504 554 625 620 765 554 900 510 M307 592 L504 554 383 887 568 740 520 854 497 1018 M937 580 L765 554 860 883 687 740 737 854 754 1014 M520 854 L627 870 737 854 M627 870 L636 1050 M504 554 L568 740 M765 554 L687 740"/>
+    <circle class="eye-orbit" cx="504" cy="554" r="65"/><circle class="eye-orbit" cx="765" cy="554" r="65"/>
+<circle cx="350" cy="510" r="4" style="--delay:0ms"/><circle cx="440" cy="505" r="4" style="--delay:55ms"/><circle cx="520" cy="514" r="4" style="--delay:110ms"/><circle cx="558" cy="543" r="4" style="--delay:165ms"/><circle cx="699" cy="542" r="4" style="--delay:220ms"/><circle cx="770" cy="503" r="4" style="--delay:275ms"/><circle cx="853" cy="510" r="4" style="--delay:330ms"/><circle cx="937" cy="580" r="4" style="--delay:385ms"/><circle cx="909" cy="729" r="4" style="--delay:440ms"/><circle cx="860" cy="883" r="4" style="--delay:495ms"/><circle cx="754" cy="1014" r="4" style="--delay:550ms"/><circle cx="636" cy="1050" r="4" style="--delay:605ms"/><circle cx="497" cy="1018" r="4" style="--delay:660ms"/><circle cx="383" cy="887" r="4" style="--delay:715ms"/><circle cx="329" cy="745" r="4" style="--delay:770ms"/><circle cx="307" cy="592" r="4" style="--delay:825ms"/><circle cx="504" cy="554" r="4" style="--delay:880ms"/><circle cx="765" cy="554" r="4" style="--delay:935ms"/><circle cx="625" cy="620" r="4" style="--delay:990ms"/><circle cx="568" cy="740" r="4" style="--delay:1045ms"/><circle cx="630" cy="766" r="4" style="--delay:1100ms"/><circle cx="687" cy="740" r="4" style="--delay:1155ms"/><circle cx="520" cy="854" r="4" style="--delay:1210ms"/><circle cx="627" cy="870" r="4" style="--delay:1265ms"/><circle cx="737" cy="854" r="4" style="--delay:1320ms"/>
    </svg>
   </div>
   <div class="profile-status" aria-hidden="true"><span data-profile-status data-hud>PROFILE READY</span><span data-hud>01 / 01</span></div>
@@ -751,6 +786,7 @@ function setupAbout(){
   draw(start);
  }
  const decodeGroup=(root,duration=850)=>root.querySelectorAll('[data-hud]').forEach((el,i)=>later(()=>decipher(el,originals.get(el),duration),i*45));
+ section.querySelectorAll('.profile-panel').forEach(panel=>{const meter=document.createElement('span');meter.className='telemetry';meter.setAttribute('aria-hidden','true');meter.innerHTML=Array.from({length:9},(_,i)=>'<i style="--i:'+i+'"></i>').join('');panel.append(meter);});
  const connector=section.querySelector('.profile-connectors');
  function layoutConnectors(){
   const root=section.getBoundingClientRect(),photo=section.querySelector('.profile-photo').getBoundingClientRect();
@@ -758,7 +794,7 @@ function setupAbout(){
   const local=r=>({x:r.left-root.left,y:r.top-root.top,w:r.width,h:r.height});
   const p=local(photo),exp=local(section.querySelector('.experience-panel').getBoundingClientRect()),skill=local(section.querySelector('.skills-panel').getBoundingClientRect()),colour=local(section.querySelector('.colour-data').getBoundingClientRect());
   const paths={
-   experience:[[p.x+p.w*.77,p.y+p.h*.42],[p.x+p.w+14,p.y+p.h*.42],[exp.x-15,exp.y+exp.h+9],[exp.x+exp.w*.55,exp.y+exp.h+9]],
+   experience:[[p.x+p.w*.738,p.y+p.h*.468],[p.x+p.w+14,p.y+p.h*.468],[exp.x-15,exp.y+exp.h+9],[exp.x+exp.w*.55,exp.y+exp.h+9]],
    skills:[[p.x+p.w*.73,p.y+p.h*.69],[p.x+p.w+8,p.y+p.h*.69],[skill.x+8,skill.y+12],[skill.x+8,skill.y+skill.h]],
    colour:[[p.x+p.w*.16,p.y+p.h*.86],[p.x-15,colour.y+13],[colour.x+colour.w+14,colour.y+13]]
   };
@@ -839,7 +875,35 @@ document.addEventListener('click',event=>{
 
 function render(){const slug=location.hash.slice(1);content.classList.toggle('project-page',slug==='lego'||slug==='omega'||slug==='thom-sweeney'||!!portfolioPages[slug]);if(portfolioPages[slug]){content.innerHTML=portfolioPage(slug);document.title=portfolioPages[slug].title+' — Jay Bowie';}else if(slug==='thom-sweeney'){content.innerHTML=thomPage();document.title='Thom Sweeney — You’ll Need a Suit — Jay Bowie';}else if(slug==='omega'){content.innerHTML=omegaPage();document.title='Omega — Made to wear — Jay Bowie';}else if(slug==='lego'){content.innerHTML=`<article class="lego-project"><section class="project-intro"><h1><span class="project-brand">LEGO</span> <span class="project-campaign">What Kids See</span></h1><div><p>Creativity comes in many forms, but one that always seems to capture the imagination is rectangular.</p><p>As we get older, we tend to see things for what they are. Practicality takes over, and the instinct to imagine what something could become gets quieter. A pile of LEGO bricks becomes something to tidy up—or a painful reminder to watch where we step. To a child, that same pile is already a racecar, a dragon or a haunted house. They can see the adventure before they’ve built it.</p><p>“What Kids See” brings that difference in perspective to life. Each execution pairs a loose pile of bricks with the name of something extraordinary, asking adults to make a connection that comes naturally to children. The colours offer a hint; imagination fills in the rest.</p><p class="project-credits">Concept | Copywriting | Design</p></div></section><div class="lego-hero">${legoImage('01',true)}</div><section class="lego-gallery" aria-label="LEGO campaign installations"><div class="lego-gallery-row">${['02','03'].map(key=>`<figure>${legoImage(key)}</figure>`).join('')}</div><div class="lego-gallery-row">${['04','05'].map(key=>`<figure>${legoImage(key)}</figure>`).join('')}</div></section><section class="lego-artwork-strip" aria-label="Five campaign artworks">${['06','07','08','09','10'].map(key=>`<figure><button type="button" class="artwork-open" data-artwork="${key}" aria-controls="artwork-viewer" aria-expanded="false" aria-label="Enlarge ${legoAssets[key].alt}">${legoImage(key)}</button></figure>`).join('')}</section><footer class="project-footer"><a href="#work">All projects</a><a href="#omega">Next project →</a></footer></article>`;document.title='LEGO — What Kids See — Jay Bowie';}else{content.innerHTML='<section aria-label="Selected projects" class="grid">'+projects.map((p,i)=>`<div class="emerge" style="--i:${i}"><a class="card soft-card" href="#${projectRoutes[i]}"><div class="soft-card__content"><div role="img" aria-label="${p[0]} project preview" class="thumb" style="${thumb(i)}"></div><div class="caption"><strong>${p[0]}</strong><span>${p[1]}</span><b class="arrow" aria-hidden="true">›</b></div></div></a></div>`).join('')+'</section>';document.title='Jay Bowie — Work';if(window.seen)document.querySelectorAll('.emerge').forEach(e=>{e.style.animationDelay='0s';e.style.animationDuration='.4s'});window.seen=true;}if(!content.classList.contains('project-page'))content.insertAdjacentHTML('beforeend',aboutMarkup());decorateControls();setupFilm();setupAbout();window.scrollTo(0,0)}
 // One finite intro: header, quiet emergence, then name collapse.
+async function playSurfaceLoader(){
+ if(motionOff.matches)return;
+ const layer=document.createElement('div');layer.className='surface-loader';layer.setAttribute('role','status');layer.innerHTML='<span class="sr-only">Loading portfolio</span><canvas aria-hidden="true"></canvas><div class="surface-loading" aria-hidden="true"><div>Loading</div></div>';
+ document.body.append(layer);const canvas=layer.querySelector('canvas'),ctx=canvas.getContext('2d');
+ const w=innerWidth,h=innerHeight,dpr=Math.min(devicePixelRatio||1,2);canvas.width=w*dpr;canvas.height=h*dpr;ctx.scale(dpr,dpr);
+ const terrain=document.createElement('canvas');terrain.width=220;terrain.height=Math.max(100,Math.round(220*h/w));const tc=terrain.getContext('2d'),frame=tc.createImageData(terrain.width,terrain.height);
+ // Adapted from the supplied Loading Text demo: one-pixel vertical strips.
+ const loading=layer.querySelector('.surface-loading'),text=loading.textContent,width=Math.ceil(loading.getBoundingClientRect().width);
+ for(let i=1;i<=width;i++){
+  const amount=Math.floor(Math.random()*51)+20,shift=Math.floor(Math.random()*11)+10,dir=i%2===0?1:-1,span=document.createElement('span');
+  span.textContent=text;span.style.setProperty('--x',(i-1)+'px');span.style.setProperty('--move-y',amount*dir+'px');span.style.setProperty('--move-y-s',(amount*dir-dir*shift)+'px');span.style.setProperty('--delay',i*10+'ms');loading.append(span);
+ }
+ void loading.offsetWidth;loading.classList.add('start');
+ const start=performance.now();
+ await new Promise(resolve=>{function draw(now){const t=(now-start)/1000;
+ if(t>3.25||motionOff.matches){resolve();return;}
+ const tw=terrain.width,th=terrain.height;
+ for(let y=0;y<th;y++)for(let x=0;x<tw;x++){
+ const u=x/tw*7,v=y/tw*7;let nx=0,ny=0;
+ for(let j=0;j<3;j++){const px=u-(1.1+j*2.4+Math.sin(t*.45+j)*.5),py=v-(1+j*.9+Math.cos(t*.4+j)*.5),r=Math.sqrt(px*px+py*py)+.001;const slope=Math.cos(r*2.4-t*.7+j)*Math.exp(-r*r/22)*.45;nx+=slope*px/Math.sqrt(r*r+.22);ny+=slope*py/Math.sqrt(r*r+.22);}
+ const light=(-nx-ny)*22,shade=232+light;const k=(y*tw+x)*4;frame.data[k]=shade;frame.data[k+1]=shade;frame.data[k+2]=shade-2;frame.data[k+3]=255;}
+ tc.putImageData(frame,0,0);ctx.drawImage(terrain,0,0,w,h);
+ requestAnimationFrame(draw);}
+ requestAnimationFrame(draw);});
+ await layer.animate([{opacity:1,filter:'blur(0px)'},{opacity:0,filter:'blur(5px)'}],{duration:motionOff.matches?0:650,fill:'forwards'}).finished;layer.remove();
+}
+
 async function playIntroduction(){
+ await playSurfaceLoader();
  if(motionOff.matches){document.body.classList.remove('introducing');await rollName(true);introDone=true;return;}
  const section=document.querySelector('.grid'),menu=[...document.querySelector('nav').children];
  const options={easing:'cubic-bezier(.25,.1,.25,1)',fill:'forwards'};
